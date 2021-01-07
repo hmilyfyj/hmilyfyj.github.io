@@ -1,0 +1,1171 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Laravel 笔记 - 部署, 八两的八九与二三">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Laravel 笔记 - 部署 | 八两的八九与二三</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="/css/prism-twilight.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">八两的八九与二三</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Medias</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/musics">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Musics</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Galleries</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">八两的八九与二三</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			Medias
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/musics " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Musics</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/books " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/galleries " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Galleries</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Laravel 笔记 - 部署</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Laravel/">
+                                <span class="chip bg-color">Laravel</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Laravel/" class="post-category">
+                                Laravel
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2016-03-22
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>&#x5F00;&#x59CB;&#x5B66;&#x4E60;&#x4E3A; WEB &#x827A;&#x672F;&#x5BB6;&#x521B;&#x9020;&#x7684; PHP &#x6846;&#x67B6;&#x3002;</p>
+<a id="more"></a>
+<hr>
+<h1 id="&#x5F85;&#x4E86;&#x89E3;"><a href="#&#x5F85;&#x4E86;&#x89E3;" class="headerlink" title="&#x5F85;&#x4E86;&#x89E3;"></a>&#x5F85;&#x4E86;&#x89E3;</h1><p>PSR-4</p>
+<h1 id="&#x5B89;&#x88C5;"><a href="#&#x5B89;&#x88C5;" class="headerlink" title="&#x5B89;&#x88C5;"></a>&#x5B89;&#x88C5;</h1><h2 id="composer"><a href="#Composer" class="headerlink" title="Composer"></a>Composer</h2><h3 id="&#x91C7;&#x7528;&#x56FD;&#x5185;&#x6E90;"><a href="#&#x91C7;&#x7528;&#x56FD;&#x5185;&#x6E90;" class="headerlink" title="&#x91C7;&#x7528;&#x56FD;&#x5185;&#x6E90;"></a>&#x91C7;&#x7528;&#x56FD;&#x5185;&#x6E90;</h3><p>&#x901A;&#x8FC7;&#x6267;&#x884C;<code>composer config -l -g</code>&#x627E;&#x5230; config.json&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x3002;</p>
+<p>&#x4FEE;&#x6539; config.json&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token string">&quot;repositories&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;packagist&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;composer&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;url&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;https://packagist.phpcomposer.com&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<h2 id="laravel"><a href="#Laravel" class="headerlink" title="Laravel"></a>Laravel</h2><pre><code>composer global require &quot;laravel/installer&quot;
+</code></pre><blockquote>
+<p>&#x8BF7;&#x786E;&#x4FDD; PATH &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x5DF2;&#x7ECF;&#x6DFB;&#x52A0;&#x4E86; <code>~/.composer/vendor/bin</code> &#x76EE;&#x5F55;&#xFF0C;&#x8FD9;&#x6837;&#xFF0C;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6; <code>laravel</code> &#x5C31;&#x80FD;&#x88AB;&#x4F60;&#x7684;&#x7CFB;&#x7EDF;&#x68C0;&#x6D4B;&#x5230;&#x4E86;&#x3002;</p>
+</blockquote>
+<h1 id="&#x4F7F;&#x7528;"><a href="#&#x4F7F;&#x7528;" class="headerlink" title="&#x4F7F;&#x7528;"></a>&#x4F7F;&#x7528;</h1><h2 id="&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x7AD9;&#x70B9;"><a href="#&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x7AD9;&#x70B9;" class="headerlink" title="&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x7AD9;&#x70B9;"></a>&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x7AD9;&#x70B9;</h2><pre><code>laravel new blog
+</code></pre><h2 id="&#x57FA;&#x672C;&#x914D;&#x7F6E;"><a href="#&#x57FA;&#x672C;&#x914D;&#x7F6E;" class="headerlink" title="&#x57FA;&#x672C;&#x914D;&#x7F6E;"></a>&#x57FA;&#x672C;&#x914D;&#x7F6E;</h2><h3 id="&#x7F8E;&#x5316;&#x94FE;&#x63A5;"><a href="#&#x7F8E;&#x5316;&#x94FE;&#x63A5;" class="headerlink" title="&#x7F8E;&#x5316;&#x94FE;&#x63A5;"></a>&#x7F8E;&#x5316;&#x94FE;&#x63A5;</h3><h4 id="apache"><a href="#Apache" class="headerlink" title="Apache"></a>Apache</h4><p>&#x4FEE;&#x6539;<code>public/.htaccess</code>&#x6587;&#x4EF6;&#x3002;</p>
+<pre><code>Options +FollowSymLinks
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+</code></pre><h4 id="nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h4><pre><code>location / {
+    try_files $uri $uri/ /index.php?$query_string;
+}
+</code></pre><h3 id="&#x73AF;&#x5883;"><a href="#&#x73AF;&#x5883;" class="headerlink" title="&#x73AF;&#x5883;"></a>&#x73AF;&#x5883;</h3><pre><code>.env &#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x53D8;&#x91CF;&#x90FD;&#x4F1A;&#x88AB;&#x52A0;&#x8F7D;&#x5230; PHP &#x7684; $_ENV &#x8D85;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x4E2D;&#x3002;
+</code></pre><h3 id="&#x914D;&#x7F6E;&#x7F13;&#x5B58;"><a href="#&#x914D;&#x7F6E;&#x7F13;&#x5B58;" class="headerlink" title="&#x914D;&#x7F6E;&#x7F13;&#x5B58;"></a>&#x914D;&#x7F6E;&#x7F13;&#x5B58;</h3><p>&#x4E3A;&#x4E86;&#x63D0;&#x5347;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x6267;&#x884C;&#x901F;&#x5EA6;&#xFF0C;&#x5728;&#x5E94;&#x7528;&#x6B63;&#x5F0F;&#x4E0A;&#x7EBF;&#x540E;&#xFF0C;&#x5E94;&#x901A;&#x8FC7; Artisan &#x7684; config:cache &#x547D;&#x4EE4;&#x5C06;&#x6240;&#x6709;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5408;&#x5E76;&#x5230;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x5E76;&#x7F13;&#x5B58;&#x8D77;&#x6765;&#x3002;&#x5373;</p>
+<pre><code>php artisan config:cache
+</code></pre><h3 id="&#x83B7;&#x53D6;-&#x4FEE;&#x6539;&#x914D;&#x7F6E;"><a href="#&#x83B7;&#x53D6;&#x3001;&#x4FEE;&#x6539;&#x914D;&#x7F6E;" class="headerlink" title="&#x83B7;&#x53D6;&#x3001;&#x4FEE;&#x6539;&#x914D;&#x7F6E;"></a>&#x83B7;&#x53D6;&#x3001;&#x4FEE;&#x6539;&#x914D;&#x7F6E;</h3><pre><code>$value = config(&apos;app.timezone&apos;);
+config([&apos;app.timezone&apos; =&gt; &apos;America/Chicago&apos;]);
+</code></pre><h3 id="&#x7EF4;&#x62A4;"><a href="#&#x7EF4;&#x62A4;" class="headerlink" title="&#x7EF4;&#x62A4;"></a>&#x7EF4;&#x62A4;</h3><pre><code>php artisan down
+php artisan up
+</code></pre><p>&#x7EF4;&#x62A4;&#x6A21;&#x5F0F;&#x65F6;&#x54CD;&#x5E94;&#x8BF7;&#x6C42;&#x7684;&#x9ED8;&#x8BA4;&#x6A21;&#x677F;&#x6587;&#x4EF6;&#x4F4D;&#x4E8E; <code>resources/views/errors/503.blade.php</code></p>
+<h1 id="&#x7F16;&#x7801;"><a href="#&#x7F16;&#x7801;" class="headerlink" title="&#x7F16;&#x7801;"></a>&#x7F16;&#x7801;</h1><h2 id="&#x6D41;&#x7A0B;"><a href="#&#x6D41;&#x7A0B;" class="headerlink" title="&#x6D41;&#x7A0B;"></a>&#x6D41;&#x7A0B;</h2><p>&#x628A;&#x8FD9;&#x4E2A;&#x653E;&#x5728;&#x6700;&#x524D;&#x9762;&#xFF0C;&#x56E0;&#x4E3A;&#x4E00;&#x5934;&#x624E;&#x8FDB;&#x6587;&#x6863;&#x4F1A;&#x611F;&#x89C9;&#x4E00;&#x5934;&#x96FE;&#x6C34;&#xFF0C;&#x88AB;&#x7275;&#x7740;&#x9F3B;&#x5B50;&#x8D70;&#x3002;</p>
+<h3 id="publicindexphp-&#x6240;&#x6709;&#x8BF7;&#x6C42;&#x7684;&#x5165;&#x53E3;"><a href="#public-index-php-&#x6240;&#x6709;&#x8BF7;&#x6C42;&#x7684;&#x5165;&#x53E3;" class="headerlink" title="public/index.php  &#x6240;&#x6709;&#x8BF7;&#x6C42;&#x7684;&#x5165;&#x53E3;"></a>public/index.php  &#x6240;&#x6709;&#x8BF7;&#x6C42;&#x7684;&#x5165;&#x53E3;</h3><blockquote>
+<p>index.php &#x6587;&#x4EF6;&#x8F7D;&#x5165; Composer &#x751F;&#x6210;&#x7684;&#x81EA;&#x52A8;&#x52A0;&#x8F7D;&#x8BBE;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#x4ECE; bootstrap/app.php &#x811A;&#x672C;&#x83B7;&#x53D6; Laravel &#x5E94;&#x7528;&#x5B9E;&#x4F8B;&#xFF0C;Laravel &#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x52A8;&#x4F5C;&#x5C31;&#x662F;&#x521B;&#x5EFA;&#x670D;&#x52A1;&#x5BB9;&#x5668;&#x5B9E;&#x4F8B;</p>
+</blockquote>
+<h3 id="httpconsole-&#x5185;&#x6838;-&#x8BF7;&#x6C42;&#x88AB;&#x53D1;&#x9001;&#x81F3;&#x6B64;"><a href="#HTTP-Console-&#x5185;&#x6838;-&#x8BF7;&#x6C42;&#x88AB;&#x53D1;&#x9001;&#x81F3;&#x6B64;" class="headerlink" title="HTTP/Console &#x5185;&#x6838; &#x8BF7;&#x6C42;&#x88AB;&#x53D1;&#x9001;&#x81F3;&#x6B64;"></a>HTTP/Console &#x5185;&#x6838; &#x8BF7;&#x6C42;&#x88AB;&#x53D1;&#x9001;&#x81F3;&#x6B64;</h3><p>HTTP &#x5185;&#x6838;&#xFF1A;app/Http/Kernel.php</p>
+<blockquote>
+<p>HTTP &#x5185;&#x6838;&#x7EE7;&#x627F;&#x81EA; Illuminate\Foundation\Http\Kernel &#x7C7B;&#xFF0C;&#x8BE5;&#x7C7B;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A; bootstrappers &#x6570;&#x7EC4;&#xFF0C;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x7C7B;&#x5728;&#x8BF7;&#x6C42;&#x88AB;&#x6267;&#x884C;&#x524D;&#x8FD0;&#x884C;&#xFF0C;&#x8FD9;&#x4E9B; &#x5185;&#x6838;&#x542F;&#x52A8;&#x8FC7;&#x7A0B;&#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x52A8;&#x4F5C;&#x4E4B;&#x4E00;&#x5C31;&#x662F;&#x4E3A;&#x5E94;&#x7528;&#x8F7D;&#x5165;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x8005;&#xFF0C;&#x5E94;&#x7528;&#x7684;&#x6240;&#x6709;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x8005;&#x90FD;&#x88AB;&#x914D;&#x7F6E;&#x5728; config/app.php &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;  providers &#x6570;&#x7EC4;&#x4E2D;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x6240;&#x6709;&#x63D0;&#x4F9B;&#x8005;&#x7684; register &#x65B9;&#x6CD5;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x7136;&#x540E;&#xFF0C;&#x6240;&#x6709;&#x63D0;&#x4F9B;&#x8005;&#x88AB;&#x6CE8;&#x518C;&#x4E4B;&#x540E;&#xFF0C;boot &#x65B9;&#x6CD5;&#x88AB;&#x8C03;&#x7528;&#x3002;</p>
+</blockquote>
+<blockquote>
+<p>&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x8005;&#x8D1F;&#x8D23;&#x542F;&#x52A8;&#x6846;&#x67B6;&#x7684;&#x6240;&#x6709;&#x5404;&#x79CD;&#x5404;&#x6837;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x6BD4;&#x5982;&#x6570;&#x636E;&#x5E93;&#x3001;&#x961F;&#x5217;&#x3001;&#x9A8C;&#x8BC1;&#x5668;&#xFF0C;&#x4EE5;&#x53CA;&#x8DEF;&#x7531;&#x7EC4;&#x4EF6;&#x7B49;&#xFF0C;&#x6B63;&#x662F;&#x56E0;&#x4E3A;&#x4ED6;&#x4EEC;&#x542F;&#x52A8;&#x5E76;&#x914D;&#x7F6E;&#x4E86;&#x6846;&#x67B6;&#x63D0;&#x4F9B;&#x7684;&#x6240;&#x6709;&#x7279;&#x6027;&#xFF0C;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x8005;&#x662F;&#x6574;&#x4E2A; Laravel &#x542F;&#x52A8;&#x8FC7;&#x7A0B;&#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x90E8;&#x5206;&#x3002;</p>
+</blockquote>
+<blockquote>
+<p>&#x914D;&#x7F6E;&#x4E86;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x3001;&#x65E5;&#x5FD7;&#x3001;&#x68C0;&#x6D4B;&#x5E94;&#x7528;&#x73AF;&#x5883;&#x4EE5;&#x53CA;&#x5176;&#x5B83;&#x5728;&#x8BF7;&#x6C42;&#x88AB;&#x5904;&#x7406;&#x524D;&#x9700;&#x8981;&#x6267;&#x884C;&#x7684;&#x4EFB;&#x52A1;&#x3002;</p>
+</blockquote>
+<p>&#x4E00;&#x65E6;&#x5E94;&#x7528;&#x88AB;&#x542F;&#x52A8;&#x5E76;&#x4E14;&#x6240;&#x6709;&#x7684;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x8005;&#x88AB;&#x6CE8;&#x518C;&#xFF0C;Request &#x5C06;&#x4F1A;&#x88AB;&#x4EA4;&#x7ED9;&#x8DEF;&#x7531;&#x5668;&#x8FDB;&#x884C;&#x5206;&#x53D1;&#xFF0C;&#x8DEF;&#x7531;&#x5668;&#x5C06;&#x4F1A;&#x5206;&#x53D1;&#x8BF7;&#x6C42;&#x5230;&#x8DEF;&#x7531;&#x6216;&#x63A7;&#x5236;&#x5668;&#xFF0C;&#x540C;&#x65F6;&#x8FD0;&#x884C;&#x6240;&#x6709;&#x8DEF;&#x7531;&#x6307;&#x5B9A;&#x7684;&#x4E2D;&#x95F4;&#x4EF6;&#x3002;</p>
+<h3 id="&#x6A21;&#x7248;"><a href="#&#x6A21;&#x7248;" class="headerlink" title="&#x6A21;&#x7248;"></a>&#x6A21;&#x7248;</h3><p>&#x5B58;&#x653E;&#x5728;<code>resources/views</code></p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Fengit</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://b.fengbl.cn/2016/03/22/laravel-note-first-try/">http://b.fengbl.cn/2016/03/22/laravel-note-first-try/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Fengit</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Laravel/">
+                                    <span class="chip bg-color">Laravel</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2016/04/10/laravel-process-analysis/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Laravel 源码分析（一） -- 整体流程">
+                        
+                        <span class="card-title">Laravel 源码分析（一） -- 整体流程</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            &#x4F5C;&#x4E3A;&#x4E0D;&#x8BFB;&#x6E90;&#x7801;&#x4F1A;&#x6B7B;&#x661F;&#x4EBA;&#xFF0C;&#x4E0D;&#x6E05;&#x695A;&#x5B9E;
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2016-04-10
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Laravel/" class="post-category">
+                                    Laravel
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Laravel/">
+                        <span class="chip bg-color">Laravel</span>
+                    </a>
+                    
+                    <a href="/tags/PHP/">
+                        <span class="chip bg-color">PHP</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2016/03/14/php-reinstall/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="手动配置lnmp环境">
+                        
+                        <span class="card-title">手动配置lnmp环境</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            &#x4F7F;&#x7528;&#x4E00;&#x952E;&#x5B89;&#x88C5;&#x811A;&#x672C;&#x7684;&#x786E;&#x65B9;&#x4FBF;&#xFF0C;&#x4F46;&#x65E0;
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2016-03-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%98%E8%85%BE/" class="post-category">
+                                    折腾
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Nginx/">
+                        <span class="chip bg-color">Nginx</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%8A%98%E8%85%BE/">
+                        <span class="chip bg-color">折腾</span>
+                    </a>
+                    
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/tags/Mysql/">
+                        <span class="chip bg-color">Mysql</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2017</span>
+            <a href="/about" target="_blank">Fengit</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

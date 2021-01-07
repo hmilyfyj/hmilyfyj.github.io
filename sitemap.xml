@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/01/16/php-this-self-static/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.825Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/03/14/php-reinstall/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.825Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/10/use-composer-width-codeigniter/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.825Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/18/phicomm-k1-router/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.825Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/28/php-namespace-study/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.825Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2015/12/06/php-summary/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.825Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2015/11/29/update-python-on-centos/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.825Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2015/12/12/php-zend-shortcut-key/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.825Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2015/12/18/python-pysipder/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.825Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/22/the-history-of-coding/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.825Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2015/11/29/nginx-ci/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.821Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/04/19/one-pc-manage-multi-git-accounts/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.821Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/28/mysql-review/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.821Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/26/javascript-study-closure-prototype/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/23/ci-surcecode-security.php/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/14/ci-sourcecode-benchmark.php/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/03/03/ci-sourcecode-view-study/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/01/16/cm-summary/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/18/ci-sourcecode-analysis-language.php/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/07/css-study-3/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2015/12/10/css-study/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2015/12/24/css-study-first-day/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/03/04/dynamic-programming-algorithm-sutdy/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2014/11/21/hello-world/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2015/11/29/hexo-sidebar-follow/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/15/ci-sourcecode-router.php/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/12/ci-sourche-code-analysis-index.php/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/19/csrf-study/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2015/12/03/hexo-webhook-autodeploy/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/16/hexo-normal-errors/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/15/ci-sourcecode-uri.php/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/20/ci-sourcecode-analysis-codeigniter.php/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/17/ci-surcecode-input.php/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/16/ci-sourcecode-output.php/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/13/ci-sourcecode-common.php/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/04/20/laravel-sourcecode-how-view-take-effect/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2018/07/03/2018-7-3-php-idempotency/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2018/07/06/2018-7-6-xxe/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/10/2019-5-19-laravel-queue/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2019/06/30/2019-6-30-chunk-vs-chuanbyid/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2019/08/23/2019-8-23-set-proxy-in-mac-terminal/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2020/07/25/2020-07-25-php-fpm-cpu-troubleshooting/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2020/07/31/2020-07-31-hackintosh/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2020/08/01/2020-08-01-modify-laravel-static-file-path/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2020/08/02/2020-08-02-phpunit/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2020/08/02/2020-08-02-repair-air-conditioner/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2020/09/10/2020-09-10-composer-killed/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2020/09/10/2020-09-10-optical-modem/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2020/09/11/2020-09-11-git-rebase/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2020/09/12/2020-09-12-laravel-admin-and-ckeditor/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2020/09/12/2020-09-12-make-dusk-support-codecoverage/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2020/09/15/2020-09-15-dusk-boot-chrome/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2020/09/11/2020-09-15-global-login-in-dusk/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2020/09/15/2020-09-15-run-phpunit-and-dusk-in-docker/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2020/10/10/2020-10-10-docker-container-network-in-centos/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2020/10/10/2020-10-10-enable-nat-in-aliyun/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2020/12/30/2020-12-30-autobuil-openwrt-for-wndr4300/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2020/12/31/2020-12-31-xiaomi-ax5-with-clash/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2020/07/19/2020-7-19-vba-for-modify-multiple-excel-files/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2021/01/07/2021-01-07-sublime-package-control/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/20/ci-sourcecode-analysis-image-lib.php/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2015/11/29/crontab/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2014/11/21/first-try/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/04/19/laravel-normal-problems/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/03/22/laravel-note-first-try/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/04/19/laravel-sourcecode-auth-analysis/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/04/24/2016-4-24-nginx-skills-and-errors/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/04/11/laravel-sourcecode-pipeline/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/03/08/linux-normal-direction/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/04/14/php-debug-skills-and-tools/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2015/12/06/python-crawl/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/29/sql-injection-study/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/21/todo-lists/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2015/11/21/wndr4300/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/22/add-textindent-in-markdown/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2015/12/22/attence-based-on-openwrt/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2015/12/03/centos-nginx-vhost/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2015/12/03/centos-summary/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/08/chrome-extension-tips/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/14/ci-sourcecode-hooks.php/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/04/22/2016-4-22-docker-study/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/04/25/2016-4-25-centos-install-expect/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/11/2016-4-26-composer-install-and-use/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/05/10/2016-5-10-tasker-use-instances/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2018/01/25/2017-10-28-set-timezone-in-docker/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2018/02/18/2017-11-15-development-tools-env/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2018/03/10/2017-11-15-run-bat-as-admin/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2017/12/14/2017-12-14-aliyun-cs/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2017/02/12/2017-2-12-ipv6-support/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2017/02/13/2017-2-13-composer-issue/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2017/03/25/2017-3-25-plan-of-ci-cd/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2017/04/08/2017-4-9-cors-not-working/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2017/07/10/2017-7-10-docker-cleanup/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2017/07/10/2017-7-10-ssl-cert-issue/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2017/07/13/2017-7-13-laravel-issues/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2017/07/15/2017-7-15-cors-knowledge/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2017/07/15/2017-7-15-laravel-multi-auth/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2017/07/16/2017-7-16-buid-production-environment-quirkly/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2017/07/16/2017-7-16-gitlab-runner-knowledge/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2017/07/28/2017-7-28-nginx-config-note/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2017/07/29/2017-7-29-rds-recovery-on-local-docker/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2017/08/10/2017-8-10-apache-vhosts-subdirectory-config/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2017/08/31/2017-8-31-nginx-forbidden-ip-direct-access/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2017/09/22/2017-9-22-mysql-knowledge/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2020/09/10/2020-09-10-phpunit-and-dusk/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/04/10/laravel-process-analysis/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/04/13/laravel-sourcecode-how-facade-work/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/04/14/laravel-sourcecode-how-service-register/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/24/algorithm-study/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/02/14/ci-sourcecode-config.php/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2017/09/02/2017-9-4-force-break-while-excuting-yum-update/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2018/12/15/2018-12-15-php-ext-manage/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2018/06/18/2018-6-18-docker-bug-stuck-on-df/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2018/06/18/2018-6-18-migrate-sentry/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2018/06/18/2018-6-18-sentry-modify-feedback-page/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/03/01/ci-sourcecode-db-study/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/04/12/laravel-sourcecode-how-establish-application-obj/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/04/15/laravel-sourcecode-how-route-work/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2018/06/18/2018-6-18-xsj-template/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2018/06/28/2018-6-28-avoid-detection-when-using-selenium/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2018/06/29/2018-6-29-taobao-login-with-qrcode/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2018/07/10/2018-7-10-generate-rsa-key-in-php/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2018/07/10/2018-7-10-mysql-performance-among-int-timestamp-datetime/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2018/07/13/2018-7-13-php-guide/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/2016/03/09/linux-concept-knowledge/</loc>
+    
+    <lastmod>2021-01-07T10:27:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/404.html</loc>
+    
+    <lastmod>2021-01-07T10:27:44.153Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/404bak.html</loc>
+    
+    <lastmod>2021-01-07T10:27:44.153Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/about/index.html</loc>
+    
+    <lastmod>2021-01-07T10:27:44.153Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/categories/index.html</loc>
+    
+    <lastmod>2021-01-07T10:27:44.153Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/contact/index.html</loc>
+    
+    <lastmod>2021-01-07T10:27:44.153Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/friends/index.html</loc>
+    
+    <lastmod>2021-01-07T10:27:44.153Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://b.fengbl.cn/tags/index.html</loc>
+    
+    <lastmod>2021-01-07T10:27:44.153Z</lastmod>
+    
+  </url>
+  
+</urlset>

@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>八两的八九与二三</title>
+  
+  <subtitle>在成为最厉害最厉害最厉害的道路上。</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://b.fengbl.cn/"/>
+  <updated>2021-01-07T10:27:45.781Z</updated>
+  <id>http://b.fengbl.cn/</id>
+  
+  <author>
+    <name>Fengit</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sublime 开启 Package Control 并加速</title>
+    <link href="http://b.fengbl.cn/2021/01/07/2021-01-07-sublime-package-control/"/>
+    <id>http://b.fengbl.cn/2021/01/07/2021-01-07-sublime-package-control/</id>
+    <published>2021-01-07T10:26:13.000Z</published>
+    <updated>2021-01-07T10:27:45.781Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;&amp;#x5B89;&amp;#x88C5;&quot;&gt;&lt;a href=&quot;#&amp;#x5B89;&amp;#x88C5;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x5B89;&amp;#x88C5;&quot;&gt;&lt;/a&gt;&amp;#x5B89;&amp;#x88C5;&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="折腾" scheme="http://b.fengbl.cn/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="Sublime" scheme="http://b.fengbl.cn/tags/Sublime/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redmi Ax5 开启 SSH 和富强</title>
+    <link href="http://b.fengbl.cn/2020/12/31/2020-12-31-xiaomi-ax5-with-clash/"/>
+    <id>http://b.fengbl.cn/2020/12/31/2020-12-31-xiaomi-ax5-with-clash/</id>
+    <published>2020-12-31T13:06:45.000Z</published>
+    <updated>2021-01-07T10:27:45.781Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;&amp;#x73B0;&amp;#x5B58;&amp;#x95EE;&amp;#x9898;&quot;&gt;&lt;a href=&quot;#&amp;#x73B0;&amp;#x5B58;&amp;#x95EE;&amp;#x9898;&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="折腾" scheme="http://b.fengbl.cn/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="Openwrt,AX5" scheme="http://b.fengbl.cn/tags/Openwrt-AX5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为 WNDR4300 设置自动编译插件</title>
+    <link href="http://b.fengbl.cn/2020/12/30/2020-12-30-autobuil-openwrt-for-wndr4300/"/>
+    <id>http://b.fengbl.cn/2020/12/30/2020-12-30-autobuil-openwrt-for-wndr4300/</id>
+    <published>2020-12-30T14:51:30.000Z</published>
+    <updated>2021-01-07T10:27:45.781Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;&amp;#x524D;&amp;#x8A00;&quot;&gt;&lt;a href=&quot;#&amp;#x524D;&amp;#x8A00;&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="折腾" scheme="http://b.fengbl.cn/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="Openwrt" scheme="http://b.fengbl.cn/tags/Openwrt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开启阿里云 ECS 的 NAT 的功能</title>
+    <link href="http://b.fengbl.cn/2020/10/10/2020-10-10-enable-nat-in-aliyun/"/>
+    <id>http://b.fengbl.cn/2020/10/10/2020-10-10-enable-nat-in-aliyun/</id>
+    <published>2020-10-10T15:31:38.000Z</published>
+    <updated>2021-01-07T10:27:45.781Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;centos&quot;&gt;&lt;a href=&quot;#Centos&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Aliyun" scheme="http://b.fengbl.cn/categories/Aliyun/"/>
+    
+    
+      <category term="Aliyun,Centos" scheme="http://b.fengbl.cn/tags/Aliyun-Centos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 容器无法访问网络的问题</title>
+    <link href="http://b.fengbl.cn/2020/10/10/2020-10-10-docker-container-network-in-centos/"/>
+    <id>http://b.fengbl.cn/2020/10/10/2020-10-10-docker-container-network-in-centos/</id>
+    <published>2020-10-10T15:07:28.000Z</published>
+    <updated>2021-01-07T10:27:45.781Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&amp;#x6700;&amp;#x8FD1;&amp;#x628A;&amp;#x7CFB;&amp;#x7EDF;&amp;#x5207;&amp;#x6362;&amp;#x5230;&amp;#x4E86; Aliyun
+        
+      
+    
+    </summary>
+    
+      <category term="Docker" scheme="http://b.fengbl.cn/categories/Docker/"/>
+    
+    
+      <category term="Docker,Centos" scheme="http://b.fengbl.cn/tags/Docker-Centos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dusk 中进行单元测试（含 Dusk）整体流程</title>
+    <link href="http://b.fengbl.cn/2020/09/15/2020-09-15-run-phpunit-and-dusk-in-docker/"/>
+    <id>http://b.fengbl.cn/2020/09/15/2020-09-15-run-phpunit-and-dusk-in-docker/</id>
+    <published>2020-09-15T13:28:18.000Z</published>
+    <updated>2021-01-07T10:27:45.781Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&amp;#x6CE8;&amp;#x610F;&amp;#x4E8B;&amp;#x9879;&amp;#xFF1A;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;#x4EE5;&amp;#x4E0B;&amp;#x547D;&amp;#x4EE4;&amp;#x9700;&amp;#x8981;&amp;#x5728;&amp;#x9879;&amp;#x76EE;&amp;#x5BF9;&amp;#x
+        
+      
+    
+    </summary>
+    
+      <category term="PHPUnit" scheme="http://b.fengbl.cn/categories/PHPUnit/"/>
+    
+    
+      <category term="PHPUnit,Dusk,Chrome" scheme="http://b.fengbl.cn/tags/PHPUnit-Dusk-Chrome/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在 Dusk 中启动 Chrome</title>
+    <link href="http://b.fengbl.cn/2020/09/15/2020-09-15-dusk-boot-chrome/"/>
+    <id>http://b.fengbl.cn/2020/09/15/2020-09-15-dusk-boot-chrome/</id>
+    <published>2020-09-15T12:28:20.000Z</published>
+    <updated>2021-01-07T10:27:45.781Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&amp;#x542F;&amp;#x52A8; Chrome &amp;#x65F6;&amp;#xFF0C;&amp;#x6709;&amp;#x4E24;&amp;#x79CD;&amp;#x4F20;&amp;#x53C2;&amp;#x65B9;&amp;#x5F0F;&amp;#xFF0C;&amp;#x5206;&amp;#x522B;&amp;#x662F;
+        
+      
+    
+    </summary>
+    
+      <category term="PHPUnit" scheme="http://b.fengbl.cn/categories/PHPUnit/"/>
+    
+    
+      <category term="PHPUnit,Dusk,Chrome" scheme="http://b.fengbl.cn/tags/PHPUnit-Dusk-Chrome/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dusk 支持代码覆盖率监测</title>
+    <link href="http://b.fengbl.cn/2020/09/12/2020-09-12-make-dusk-support-codecoverage/"/>
+    <id>http://b.fengbl.cn/2020/09/12/2020-09-12-make-dusk-support-codecoverage/</id>
+    <published>2020-09-12T13:44:38.000Z</published>
+    <updated>2021-01-07T10:27:45.781Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&amp;#x6B63;&amp;#x5E38;&amp;#x5176;&amp;#x6982;&amp;#x51B5;&amp;#x4E0B;&amp;#x6267;&amp;#x884C; phpunit&amp;#xFF0C;dusk
+        
+      
+    
+    </summary>
+    
+      <category term="Dusk" scheme="http://b.fengbl.cn/categories/Dusk/"/>
+    
+    
+      <category term="Dusk,PHPUnit,CodeCoverage" scheme="http://b.fengbl.cn/tags/Dusk-PHPUnit-CodeCoverage/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Larvel Admin 接入 CKEditor 4</title>
+    <link href="http://b.fengbl.cn/2020/09/12/2020-09-12-laravel-admin-and-ckeditor/"/>
+    <id>http://b.fengbl.cn/2020/09/12/2020-09-12-laravel-admin-and-ckeditor/</id>
+    <published>2020-09-12T03:50:08.000Z</published>
+    <updated>2021-01-07T10:27:45.781Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&amp;#x6784;&amp;#x9020;&amp;#x6269;&amp;#x5C55;&amp;#xFF1A;&lt;/p&gt;
+&lt;pre class=&quot; language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token
+        
+      
+    
+    </summary>
+    
+      <category term="Git" scheme="http://b.fengbl.cn/categories/Git/"/>
+    
+    
+      <category term="Git" scheme="http://b.fengbl.cn/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在 dusk 中使用全局登录</title>
+    <link href="http://b.fengbl.cn/2020/09/11/2020-09-15-global-login-in-dusk/"/>
+    <id>http://b.fengbl.cn/2020/09/11/2020-09-15-global-login-in-dusk/</id>
+    <published>2020-09-11T11:37:02.000Z</published>
+    <updated>2021-01-07T10:27:45.781Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&amp;#x8C03;&amp;#x6574; DuskTestCase&amp;#xFF0C;&amp;#x589E;&amp;#x52A0;&amp;#x4EE5;&amp;#x4E0B;&amp;#x65B9;&amp;#x6CD5;&amp;#x3002;&lt;/p&gt;
+&lt;pre class=&quot; language-php&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+      <category term="PHPUnit" scheme="http://b.fengbl.cn/categories/PHPUnit/"/>
+    
+    
+      <category term="PHPUnit,Dusk" scheme="http://b.fengbl.cn/tags/PHPUnit-Dusk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git Rebasae</title>
+    <link href="http://b.fengbl.cn/2020/09/11/2020-09-11-git-rebase/"/>
+    <id>http://b.fengbl.cn/2020/09/11/2020-09-11-git-rebase/</id>
+    <published>2020-09-11T11:37:02.000Z</published>
+    <updated>2021-01-07T10:27:45.781Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&amp;#x4E2D;&amp;#x6587;&amp;#x8BD1;&amp;#x540D;&amp;#x53D8;&amp;#x57FA;&amp;#xFF0C;&amp;#x987E;&amp;#x540D;&amp;#x601D;&amp;#x4E49;&amp;#xFF0C;&amp;#x628A;&amp;#x67D0;&amp;#x4E2A;&amp;#x6307;&amp;#x5B9A;&amp;
+        
+      
+    
+    </summary>
+    
+      <category term="Git" scheme="http://b.fengbl.cn/categories/Git/"/>
+    
+    
+      <category term="Git" scheme="http://b.fengbl.cn/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>光猫进入超管</title>
+    <link href="http://b.fengbl.cn/2020/09/10/2020-09-10-optical-modem/"/>
+    <id>http://b.fengbl.cn/2020/09/10/2020-09-10-optical-modem/</id>
+    <published>2020-09-10T12:12:39.000Z</published>
+    <updated>2021-01-07T10:27:45.781Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;&amp;#x524D;&amp;#x60C5;&amp;#x63D0;&amp;#x8981;&quot;&gt;&lt;a href=&quot;#&amp;#x524D;&amp;#x60C5;&amp;#x63D0;&amp;#x8981;&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://b.fengbl.cn/categories/PHP/"/>
+    
+    
+      <category term="PHP,PHPUnit,Docker" scheme="http://b.fengbl.cn/tags/PHP-PHPUnit-Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PHPUnit 和 Dusk</title>
+    <link href="http://b.fengbl.cn/2020/09/10/2020-09-10-phpunit-and-dusk/"/>
+    <id>http://b.fengbl.cn/2020/09/10/2020-09-10-phpunit-and-dusk/</id>
+    <published>2020-09-10T11:46:53.000Z</published>
+    <updated>2021-01-07T10:27:45.781Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://b.fengbl.cn/categories/PHP/"/>
+    
+    
+      <category term="PHP,PHPUnit,Docker" scheme="http://b.fengbl.cn/tags/PHP-PHPUnit-Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Composer 执行时被 Killed</title>
+    <link href="http://b.fengbl.cn/2020/09/10/2020-09-10-composer-killed/"/>
+    <id>http://b.fengbl.cn/2020/09/10/2020-09-10-composer-killed/</id>
+    <published>2020-09-10T11:24:20.000Z</published>
+    <updated>2021-01-07T10:27:45.781Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&amp;#x6700;&amp;#x8FD1;&amp;#x5728;&amp;#x6267;&amp;#x884C;&amp;#x6267;&amp;#x884C; &lt;code&gt;composer require&lt;/code&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://b.fengbl.cn/categories/PHP/"/>
+    
+    
+      <category term="PHP,PHPUnit" scheme="http://b.fengbl.cn/tags/PHP-PHPUnit/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PHP 测试</title>
+    <link href="http://b.fengbl.cn/2020/08/02/2020-08-02-phpunit/"/>
+    <id>http://b.fengbl.cn/2020/08/02/2020-08-02-phpunit/</id>
+    <published>2020-08-02T04:34:09.000Z</published>
+    <updated>2021-01-07T10:27:45.781Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&amp;#x51C6;&amp;#x5907;&amp;#x586B;&amp;#x5751;&amp;#x3002;&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://b.fengbl.cn/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://b.fengbl.cn/tags/PHP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>修空调流水账</title>
+    <link href="http://b.fengbl.cn/2020/08/02/2020-08-02-repair-air-conditioner/"/>
+    <id>http://b.fengbl.cn/2020/08/02/2020-08-02-repair-air-conditioner/</id>
+    <published>2020-08-02T04:34:09.000Z</published>
+    <updated>2021-01-07T10:27:45.781Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;202008020455&quot;&gt;&lt;a href=&quot;#202008020455&quot; class=&quot;headerlink&quot; title=&quot;202008020455&quot;&gt;&lt;/a&gt;202008020455&lt;/h3&gt;
+&lt;video width=&quot;100%&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://b.fengbl.cn/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://b.fengbl.cn/tags/PHP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>替换 Laravel-Admin 静态资源</title>
+    <link href="http://b.fengbl.cn/2020/08/01/2020-08-01-modify-laravel-static-file-path/"/>
+    <id>http://b.fengbl.cn/2020/08/01/2020-08-01-modify-laravel-static-file-path/</id>
+    <published>2020-08-01T04:18:35.000Z</published>
+    <updated>2021-01-07T10:27:45.781Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;&amp;#x539F;&amp;#x6709;&amp;#x66FF;&amp;#x6362;&amp;#x65B9;&amp;#x6848;&quot;&gt;&lt;a href=&quot;#&amp;#x539F;&amp;#x6709;&amp;#x66FF;&amp;#x6362;&amp;#x65B9;&amp;#x6848;&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="折腾" scheme="http://b.fengbl.cn/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="折腾" scheme="http://b.fengbl.cn/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>黑苹果相关</title>
+    <link href="http://b.fengbl.cn/2020/07/31/2020-07-31-hackintosh/"/>
+    <id>http://b.fengbl.cn/2020/07/31/2020-07-31-hackintosh/</id>
+    <published>2020-07-31T11:42:18.000Z</published>
+    <updated>2021-01-07T10:27:45.781Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;&amp;#x5DF2;&amp;#x6298;&amp;#x817E;&amp;#x673A;&amp;#x578B;&quot;&gt;&lt;a href=&quot;#&amp;#x5DF2;&amp;#x6298;&amp;#x817E;&amp;#x673A;&amp;#x578B;&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="折腾" scheme="http://b.fengbl.cn/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="折腾,黑苹果" scheme="http://b.fengbl.cn/tags/%E6%8A%98%E8%85%BE-%E9%BB%91%E8%8B%B9%E6%9E%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记录一次 CPU 异常排查记录</title>
+    <link href="http://b.fengbl.cn/2020/07/25/2020-07-25-php-fpm-cpu-troubleshooting/"/>
+    <id>http://b.fengbl.cn/2020/07/25/2020-07-25-php-fpm-cpu-troubleshooting/</id>
+    <published>2020-07-25T12:09:39.000Z</published>
+    <updated>2021-01-07T10:27:45.781Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;不知从何时开始，服务器会有偶发性的 cpu 占用报警，无法确定原因，只能临时通过&lt;code&gt;kill -USR2 1&lt;/code&gt; 命令重启 php 来解决。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="安全" scheme="http://b.fengbl.cn/categories/%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="PHP" scheme="http://b.fengbl.cn/tags/PHP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>通过 VBS 批量修改 Excel</title>
+    <link href="http://b.fengbl.cn/2020/07/19/2020-7-19-vba-for-modify-multiple-excel-files/"/>
+    <id>http://b.fengbl.cn/2020/07/19/2020-7-19-vba-for-modify-multiple-excel-files/</id>
+    <published>2020-07-19T10:38:00.000Z</published>
+    <updated>2021-01-07T10:27:45.781Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近收到了朋友的求助，需求是把批量多个 excel 文件中的同一位置的单元格改成其他内容，新的内容中包含公式和段落格式。11&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="折腾" scheme="http://b.fengbl.cn/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="Excel,Office" scheme="http://b.fengbl.cn/tags/Excel-Office/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,1208 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="PHPUnit 和 Dusk, 八两的八九与二三">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>PHPUnit 和 Dusk | 八两的八九与二三</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="/css/prism-twilight.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">八两的八九与二三</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Medias</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/musics">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Musics</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Galleries</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">八两的八九与二三</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			Medias
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/musics " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Musics</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/books " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/galleries " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Galleries</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">PHPUnit 和 Dusk</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/PHP-PHPUnit-Docker/">
+                                <span class="chip bg-color">PHP,PHPUnit,Docker</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/PHP/" class="post-category">
+                                PHP
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-09-10
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="&#x9700;&#x8981;&#x7528;-dusk-&#x6765;&#x8FDB;&#x884C;&#x5B8C;&#x6574;&#x7684;&#x529F;&#x80FD;&#x6D4B;&#x8BD5;&#x6240;&#x4EE5;&#x6709;&#x4E86;&#x8FD9;&#x7BC7;&#x63A2;&#x7D22;&#x6587;&#x7AE0;"><a href="#&#x9700;&#x8981;&#x7528;-Dusk-&#x6765;&#x8FDB;&#x884C;&#x5B8C;&#x6574;&#x7684;&#x529F;&#x80FD;&#x6D4B;&#x8BD5;&#xFF0C;&#x6240;&#x4EE5;&#x6709;&#x4E86;&#x8FD9;&#x7BC7;&#x63A2;&#x7D22;&#x6587;&#x7AE0;&#x3002;" class="headerlink" title="&#x9700;&#x8981;&#x7528; Dusk &#x6765;&#x8FDB;&#x884C;&#x5B8C;&#x6574;&#x7684;&#x529F;&#x80FD;&#x6D4B;&#x8BD5;&#xFF0C;&#x6240;&#x4EE5;&#x6709;&#x4E86;&#x8FD9;&#x7BC7;&#x63A2;&#x7D22;&#x6587;&#x7AE0;&#x3002;"></a>&#x9700;&#x8981;&#x7528; Dusk &#x6765;&#x8FDB;&#x884C;&#x5B8C;&#x6574;&#x7684;&#x529F;&#x80FD;&#x6D4B;&#x8BD5;&#xFF0C;&#x6240;&#x4EE5;&#x6709;&#x4E86;&#x8FD9;&#x7BC7;&#x63A2;&#x7D22;&#x6587;&#x7AE0;&#x3002;</h2><h1 id="&#x521D;&#x59CB;&#x5316;"><a href="#&#x521D;&#x59CB;&#x5316;" class="headerlink" title="&#x521D;&#x59CB;&#x5316;"></a>&#x521D;&#x59CB;&#x5316;</h1><ul>
+<li>&#x5982;&#x679C;&#x9700;&#x8981;&#x5355;&#x72EC;&#x6267;&#x884C; dusk&#xFF0C;&#x6CA1;&#x6709; nginx &#x4F5C;&#x4E3A;&#x4EE3;&#x7406;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x6267;&#x884C; <code>php artisan serve --env=dusk.testing</code> &#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x53D8;&#x91CF;&#x6587;&#x4EF6;&#x4E3A;&#xFF1A;<code>.env.dusk.enving</code>&#x3002;</li>
+<li><code>php artisan dusk</code> &#x540C;&#x6837;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0A;&#x8FF0;&#x65B9;&#x6CD5;&#x6307;&#x5B9A;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x3002;</li>
+<li><code>phpunit</code> &#x4E0D;&#x786E;&#x5B9A;&#x3002;</li>
+<li>&#x4F7F;&#x7528; dusk &#x65F6;&#xFF0C;&#x81EA;&#x52A8;&#x8BFB;&#x53D6; phpunit.dusk.xml&#x3002;</li>
+<li>&#x4F7F;&#x7528; phpunit &#x65F6;&#xFF0C;&#x81EA;&#x52A8;&#x8BFB;&#x53D6; phpunit.xml&#x3002;</li>
+</ul>
+<h2 id="&#x63A5;&#x5165;-dusk"><a href="#&#x63A5;&#x5165;-Dusk" class="headerlink" title="&#x63A5;&#x5165; Dusk"></a>&#x63A5;&#x5165; Dusk</h2><ul>
+<li>&#x5B89;&#x88C5; dusk&#xFF1A;<a href="https://learnku.com/docs/laravel/7.x/dusk/7512" target="_blank" rel="noopener">https://learnku.com/docs/laravel/7.x/dusk/7512</a></li>
+<li>&#x5B89;&#x88C5; chromium&#xFF1A;<code>apt-get update &amp;&amp; apt-get install -y chromium</code></li>
+<li>&#x5B89;&#x88C5; chromedriver&#xFF1A;<code>php artisan dusk:chrome-driver 83</code><br><code>php artisan dusk:install</code> &#x4F1A;&#x5B89;&#x88C5;&#x6700;&#x65B0;&#x7684; driver&#xFF0C;&#x6700;&#x65B0;&#x7248;&#x53EF;&#x80FD;&#x548C;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x5185;&#x7684; Chrome &#x7248;&#x672C;&#x4E0D;&#x5339;&#x914D;&#xFF0C;&#x8FDB;&#x800C;&#x5BFC;&#x81F4;&#x62A5;&#x9519;&#x3002;&#x6240;&#x4EE5;&#x5728;&#x5B89;&#x88C5;&#x524D;&#x53EF;&#x4EE5;&#x5148;&#x901A;&#x8FC7; <code>chromium --version</code> &#x67E5;&#x770B;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x7528;&#x4E8E;&#x5236;&#x5B9A; driver &#x7684;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x76EE;&#x524D;&#x5728;&#x6211;&#x5728;&#x4F7F;&#x7528;&#x7684;&#x7248;&#x672C;&#x662F; 83&#xFF0C;&#x6700;&#x65B0;&#x7248;&#x662F; 85&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x5B89;&#x88C5; driver &#x7684;&#x547D;&#x4EE4;&#x4E2D;&#x6307;&#x5B9A;&#x7248;&#x672C;&#x53F7;&#x4E3A; 83&#x3002;<h3 id="&#x6267;&#x884C;"><a href="#&#x6267;&#x884C;" class="headerlink" title="&#x6267;&#x884C;"></a>&#x6267;&#x884C;</h3><code>php artisan dusk</code>&#x3001;<code>./vendor/bin/phpunit</code> &#x90FD;&#x53EF;&#x4EE5;&#x89E6;&#x53D1; dusk &#x6D4B;&#x8BD5;&#x3002;</li>
+</ul>
+<h4 id="&#x62A5;&#x9519;invalid-session-id"><a href="#&#x62A5;&#x9519;&#xFF1A;invalid-session-id" class="headerlink" title="&#x62A5;&#x9519;&#xFF1A;invalid session id"></a>&#x62A5;&#x9519;&#xFF1A;invalid session id</h4><p>&#x5982;&#x679C;&#x9047;&#x5230;&#x4E86; <code>invalid session id</code> &#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x5728; docker &#x7684; /dev/shm &#x7A7A;&#x95F4;&#x4E0D;&#x8DB3;&#x5BFC;&#x81F4;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F; 64M&#xFF0C;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x6848;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#xFF1A;</p>
+<ul>
+<li>&#x7ED9; docker &#x5BB9;&#x5668;&#x5206;&#x914D;&#x66F4;&#x5927;&#x7684; shm-size&#x3002;compose &#x6587;&#x4EF6;&#x4E2D;&#x589E;&#x52A0; <code>shm_size: &quot;512M&quot;</code>&#x3002;</li>
+<li>&#x5728;&#x542F;&#x52A8;&#x547D;&#x4EE4;&#x4E2D;&#x52A0;&#x5165; <code>--disable-dev-shm-usage</code>&#xFF0C;&#x8FD9;&#x4E2A;&#x6CA1;&#x6709;&#x9A8C;&#x8BC1;&#x8FC7;&#xFF0C;&#x540E;&#x6765;&#x65E0;&#x6CD5;&#x590D;&#x73B0;&#x8BE5;&#x6545;&#x969C;&#x4E86;&#x3002;</li>
+</ul>
+<pre class=" language-PHP"><code class="language-PHP">There was 1 error:
+
+1) Tests\Browser\SchoolTest::testIndex
+Facebook\WebDriver\Exception\InvalidSessionIdException: invalid session id
+
+/Users/fengit/workspace/php/Private/vendor/php-webdriver/webdriver/lib/Exception/WebDriverException.php:107
+/Users/fengit/workspace/php/Private/vendor/php-webdriver/webdriver/lib/Remote/HttpCommandExecutor.php:370
+/Users/fengit/workspace/php/Private/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:590
+/Users/fengit/workspace/php/Private/vendor/php-webdriver/webdriver/lib/Remote/RemoteExecuteMethod.php:27
+/Users/fengit/workspace/php/Private/vendor/php-webdriver/webdriver/lib/WebDriverOptions.php:166
+/Users/fengit/workspace/php/Private/vendor/laravel/dusk/src/Browser.php:396
+/Users/fengit/workspace/php/Private/vendor/laravel/dusk/src/Concerns/ProvidesBrowser.php:161
+/Users/fengit/workspace/php/Private/vendor/laravel/framework/src/Illuminate/Support/Traits/EnumeratesValues.php:202
+/Users/fengit/workspace/php/Private/vendor/laravel/dusk/src/Concerns/ProvidesBrowser.php:162
+/Users/fengit/workspace/php/Private/vendor/laravel/dusk/src/Concerns/ProvidesBrowser.php:78
+/Users/fengit/workspace/php/Private/tests/Browser/SchoolTest.php:29
+
+Caused by
+Facebook\WebDriver\Exception\UnknownErrorException: unknown error: session deleted because of page crash
+from unknown error: cannot determine loading status
+from tab crashed
+  (Session info: headless chrome=83.0.4103.116)
+
+/Users/fengit/workspace/php/Private/vendor/php-webdriver/webdriver/lib/Exception/WebDriverException.php:139
+/Users/fengit/workspace/php/Private/vendor/php-webdriver/webdriver/lib/Remote/HttpCommandExecutor.php:370
+/Users/fengit/workspace/php/Private/vendor/php-webdriver/webd
+</code></pre>
+<h4 id="&#x62A5;&#x9519;chrome-has-crashed"><a href="#&#x62A5;&#x9519;&#xFF1A;Chrome-has-crashed" class="headerlink" title="&#x62A5;&#x9519;&#xFF1A;Chrome has crashed"></a>&#x62A5;&#x9519;&#xFF1A;Chrome has crashed</h4><p>&#x5982;&#x679C;&#x6267;&#x884C;&#x65F6;&#x9047;&#x5230;<code>Chrome has crashed</code>&#x7684;&#x62A5;&#x9519;&#xFF0C;&#x53EF;&#x5C1D;&#x8BD5;&#x5728; Chrome &#x7684;&#x542F;&#x52A8;&#x53C2;&#x6570;&#x4E2D;&#x589E;&#x52A0;&#x8FD9;&#x4E2A;&#x53C2;&#x6570; <code>--no-sandbox</code>&#xFF0C;&#x53C2;&#x8003;&#x6587;&#x6863;&#xFF1A;<a href="https://github.com/SeleniumHQ/selenium/issues/4961&#xFF0C;&#x7F51;&#x9875;&#x4E2D;&#x8FD8;&#x63D0;&#x5230;&#x4E86;&#x53E6;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x6682;&#x672A;&#x9A8C;&#x8BC1;&#xFF1A;`--single-process`" target="_blank" rel="noopener">https://github.com/SeleniumHQ/selenium/issues/4961&#xFF0C;&#x7F51;&#x9875;&#x4E2D;&#x8FD8;&#x63D0;&#x5230;&#x4E86;&#x53E6;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x6682;&#x672A;&#x9A8C;&#x8BC1;&#xFF1A;`--single-process`</a></p>
+<pre class=" language-php"><code class="language-php"><span class="token punctuation">[</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">]</span> <span class="token number">1</span><span class="token punctuation">)</span> Tests\<span class="token package">Browser<span class="token punctuation">\</span>SchoolTest</span><span class="token punctuation">:</span><span class="token punctuation">:</span>testIndex
+<span class="token punctuation">[</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">]</span> Facebook\<span class="token package">WebDriver<span class="token punctuation">\</span>Exception<span class="token punctuation">\</span>UnknownServerException</span><span class="token punctuation">:</span> unknown error<span class="token punctuation">:</span> Chrome failed to start<span class="token punctuation">:</span> exited abnormally
+<span class="token punctuation">[</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">]</span>   <span class="token punctuation">(</span>unknown error<span class="token punctuation">:</span> DevToolsActivePort file doesn&apos;t exist<span class="token punctuation">)</span>
+<span class="token punctuation">[</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">]</span>   <span class="token punctuation">(</span>The process started from chrome location <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>chromium is no longer running<span class="token punctuation">,</span> so ChromeDriver is assuming that Chrome has crashed<span class="token punctuation">.</span><span class="token punctuation">)</span>
+<span class="token punctuation">[</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">]</span>   <span class="token punctuation">(</span>Driver info<span class="token punctuation">:</span> chromedriver<span class="token operator">=</span><span class="token number">2.45</span><span class="token punctuation">.</span><span class="token function">615279</span> <span class="token punctuation">(</span>12b89733300bd268cff3b78fc76cb8f3a7cc44e5<span class="token punctuation">)</span><span class="token punctuation">,</span>platform<span class="token operator">=</span>Linux <span class="token number">3.10</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token operator">-</span><span class="token number">1062.18</span><span class="token punctuation">.</span><span class="token number">1</span><span class="token punctuation">.</span>el7<span class="token punctuation">.</span>x86_64 x86_64<span class="token punctuation">)</span>
+<span class="token punctuation">[</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">]</span> 
+<span class="token punctuation">[</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">]</span> <span class="token operator">/</span>root<span class="token operator">/</span>workspace<span class="token operator">/</span>anyishou_private_934D<span class="token operator">/</span>vendor<span class="token operator">/</span>php<span class="token operator">-</span>webdriver<span class="token operator">/</span>webdriver<span class="token operator">/</span>lib<span class="token operator">/</span>Exception<span class="token operator">/</span>WebDriverException<span class="token punctuation">.</span>php<span class="token punctuation">:</span><span class="token number">175</span>
+<span class="token punctuation">[</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">]</span> <span class="token operator">/</span>root<span class="token operator">/</span>workspace<span class="token operator">/</span>anyishou_private_934D<span class="token operator">/</span>vendor<span class="token operator">/</span>php<span class="token operator">-</span>webdriver<span class="token operator">/</span>webdriver<span class="token operator">/</span>lib<span class="token operator">/</span>Remote<span class="token operator">/</span>HttpCommandExecutor<span class="token punctuation">.</span>php<span class="token punctuation">:</span><span class="token number">376</span>
+<span class="token punctuation">[</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">]</span> <span class="token operator">/</span>root<span class="token operator">/</span>workspace<span class="token operator">/</span>anyishou_private_934D<span class="token operator">/</span>vendor<span class="token operator">/</span>php<span class="token operator">-</span>webdriver<span class="token operator">/</span>webdriver<span class="token operator">/</span>lib<span class="token operator">/</span>Remote<span class="token operator">/</span>RemoteWebDriver<span class="token punctuation">.</span>php<span class="token punctuation">:</span><span class="token number">136</span>
+<span class="token punctuation">[</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">]</span> <span class="token operator">/</span>root<span class="token operator">/</span>workspace<span class="token operator">/</span>anyishou_private_934D<span class="token operator">/</span>tests<span class="token operator">/</span>DuskTestCase<span class="token punctuation">.</span>php<span class="token punctuation">:</span><span class="token number">40</span>
+<span class="token punctuation">[</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">]</span> <span class="token operator">/</span>root<span class="token operator">/</span>workspace<span class="token operator">/</span>anyishou_private_934D<span class="token operator">/</span>vendor<span class="token operator">/</span>laravel<span class="token operator">/</span>dusk<span class="token operator">/</span>src<span class="token operator">/</span>Concerns<span class="token operator">/</span>ProvidesBrowser<span class="token punctuation">.</span>php<span class="token punctuation">:</span><span class="token number">200</span>
+<span class="token punctuation">[</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">]</span> <span class="token operator">/</span>root<span class="token operator">/</span>workspace<span class="token operator">/</span>anyishou_private_934D<span class="token operator">/</span>vendor<span class="token operator">/</span>laravel<span class="token operator">/</span>framework<span class="token operator">/</span>src<span class="token operator">/</span>Illuminate<span class="token operator">/</span>Support<span class="token operator">/</span>helpers<span class="token punctuation">.</span>php<span class="token punctuation">:</span><span class="token number">404</span>
+<span class="token punctuation">[</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">]</span> <span class="token operator">/</span>root<span class="token operator">/</span>workspace<span class="token operator">/</span>anyishou_private_934D<span class="token operator">/</span>vendor<span class="token operator">/</span>laravel<span class="token operator">/</span>dusk<span class="token operator">/</span>src<span class="token operator">/</span>Concerns<span class="token operator">/</span>ProvidesBrowser<span class="token punctuation">.</span>php<span class="token punctuation">:</span><span class="token number">201</span>
+<span class="token punctuation">[</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">]</span> <span class="token operator">/</span>root<span class="token operator">/</span>workspace<span class="token operator">/</span>anyishou_private_934D<span class="token operator">/</span>vendor<span class="token operator">/</span>laravel<span class="token operator">/</span>dusk<span class="token operator">/</span>src<span class="token operator">/</span>Concerns<span class="token operator">/</span>ProvidesBrowser<span class="token punctuation">.</span>php<span class="token punctuation">:</span><span class="token number">95</span>
+<span class="token punctuation">[</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">]</span> <span class="token operator">/</span>root<span class="token operator">/</span>workspace<span class="token operator">/</span>anyishou_private_934D<span class="token operator">/</span>vendor<span class="token operator">/</span>laravel<span class="token operator">/</span>dusk<span class="token operator">/</span>src<span class="token operator">/</span>Concerns<span class="token operator">/</span>ProvidesBrowser<span class="token punctuation">.</span>php<span class="token punctuation">:</span><span class="token number">65</span>
+<span class="token punctuation">[</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">09</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">]</span> <span class="token operator">/</span>root<span class="token operator">/</span>workspace<span class="token operator">/</span>anyishou_private_934D<span class="token operator">/</span>tests<span class="token operator">/</span>Browser<span class="token operator">/</span>SchoolTest<span class="token punctuation">.</span>php<span class="token punctuation">:</span><span class="token number">23</span>
+</code></pre>
+<h4 id="&#x62A5;&#x9519;authenticatable-&#x629B;&#x5F02;&#x5E38;"><a href="#&#x62A5;&#x9519;&#xFF1A;Authenticatable-&#x629B;&#x5F02;&#x5E38;" class="headerlink" title="&#x62A5;&#x9519;&#xFF1A;Authenticatable &#x629B;&#x5F02;&#x5E38;"></a>&#x62A5;&#x9519;&#xFF1A;Authenticatable &#x629B;&#x5F02;&#x5E38;</h4><pre class=" language-php"><code class="language-php">Argument <span class="token number">1</span> passed to Illuminate\<span class="token package">Auth<span class="token punctuation">\</span>SessionGuard</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">)</span> must implement <span class="token keyword">interface</span> <span class="token class-name">Illuminate<span class="token punctuation">\</span>Contracts<span class="token punctuation">\</span>Auth<span class="token punctuation">\</span>Authenticatable</span><span class="token punctuation">,</span> <span class="token keyword">null</span> given<span class="token punctuation">,</span> called in <span class="token operator">/</span>home<span class="token operator">/</span>wwwroot<span class="token operator">/</span>Anyishou<span class="token operator">/</span>vendor<span class="token operator">/</span>laravel<span class="token operator">/</span>dusk<span class="token operator">/</span>src<span class="token operator">/</span>Http<span class="token operator">/</span>Controllers<span class="token operator">/</span>UserController<span class="token punctuation">.</span>php on line <span class="token number">47</span>
+</code></pre>
+<p>&#x8FD9;&#x662F;&#x767B;&#x5F55;&#x5931;&#x8D25;&#x89E6;&#x53D1;&#x7684;&#x6545;&#x969C;&#xFF0C;&#x539F;&#x56E0;&#x53EF;&#x80FD;&#x662F;&#x8868;&#x91CC;&#x6CA1;&#x6570;&#x636E;&#x6216;&#x8005;&#x6839;&#x672C;&#x6CA1;&#x6709;&#x5EFA;&#x8868;&#xFF0C;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x63A5;&#x53E3;&#x62A5;&#x9519;&#x65E5;&#x5FD7;&#xFF0C;&#x6B64;&#x65F6;&#x63A5;&#x53E3;&#x7684;&#x62A5;&#x9519;&#x4E0D;&#x4F1A;&#x663E;&#x793A;&#x5230; dusk &#x91CC;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x8981;&#x53EA;&#x901A;&#x8FC7; dusk &#x63A7;&#x5236;&#x53F0;&#x6392;&#x67E5;&#x3002;&#x901A;&#x8FC7; sentry &#x65E5;&#x5FD7;&#x53EF;&#x77E5;&#x5177;&#x4F53;&#x62A5;&#x9519;&#x3002;</p>
+<p><img src="/media/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_1230d378-07f0-4a82-82a5-8cb6de562869.png" alt="&#x4F01;&#x4E1A;&#x5FAE;&#x4FE1;&#x622A;&#x56FE;_1230d378-07f0-4a82-82a5-8cb6de562869"><br>&#x6570;&#x636E;&#x5E93;&#x76F8;&#x5173;&#x95EE;&#x9898;</p>
+<h3 id="&#x4E00;&#x4E9B;&#x63A2;&#x7D22;"><a href="#&#x4E00;&#x4E9B;&#x63A2;&#x7D22;" class="headerlink" title="&#x4E00;&#x4E9B;&#x63A2;&#x7D22;"></a>&#x4E00;&#x4E9B;&#x63A2;&#x7D22;</h3><ul>
+<li>dusk &#x65E0;&#x6CD5;&#x4F7F;&#x7528; in-memory sqlite&#xFF0C;&#x6240;&#x4EE5;&#x4F7F;&#x7528;&#x672C;&#x5730;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x65B9;&#x6CD5;&#xFF1A;&#x5728; database &#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA;&#x7A7A;&#x6587;&#x4EF6;&#x5373;&#x53EF;&#x89E3;&#x51B3;&#x95EE;&#x9898;&#x3002;</li>
+<li>Dusk &#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x4E2D;&#xFF0C;&#x8981;&#x4F7F;&#x7528; use DatabaseMigrations &#x6765;&#x6784;&#x5EFA;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x4E0D;&#x662F; RefreshDatabase&#x3002;</li>
+<li>&#x7275;&#x6D89;&#x5230;&#x9875;&#x9762;&#x8DF3;&#x8F6C;&#x7684;&#xFF0C;&#x614E;&#x91CD;&#x4F7F;&#x7528; pressAndWaitfor&#xFF0C;&#x9664;&#x975E;&#x4F60;&#x5F88;&#x4E86;&#x89E3;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x4F5C;&#x7528;&#x3002;</li>
+<li>&#x7275;&#x6D89;&#x5230;&#x591A;&#x6B21;&#x767B;&#x9646;&#x7684;&#xFF0C;&#x8BB0;&#x5F97;&#x53CA;&#x65F6;&#x6E05;&#x7406; cookie &#x6216;&#x8005;&#x5168;&#x7A0B;&#x767B;&#x5F55;&#x4E00;&#x4E2A;&#x8D26;&#x53F7;&#x3002;</li>
+</ul>
+<p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x600E;&#x4E48;&#x914D;&#x7F6E;&#xFF1F;&#x5F53;&#x6267;&#x884C; <code>phpunit</code> &#x547D;&#x4EE4;&#x65F6;&#xFF0C;<code>dusk</code> &#x4F1A;&#x76F4;&#x63A5;&#x8BFB;&#x53D6; .env &#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x6240;&#x4EE5;&#x8DD1;&#x6D4B;&#x8BD5;&#x65F6;&#xFF0C;&#x9875;&#x9762;&#x4F1A;&#x8F93;&#x51FA; 500&#x3002;&#x5F53;&#x6267;&#x884C; <code>php atrisan dusk</code> &#x65F6;&#xFF0C;dusk &#x4F1A;&#x4F18;&#x5148;&#x8BFB;&#x53D6; <code>.env.dusk</code> &#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;&#x81F3;&#x4E8E; <code>.env.testing</code> &#x8FD9;&#x7C7B;&#x914D;&#x7F6E;&#x65B9;&#x6CD5;&#xFF0C;&#x6211;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x5229;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x914D;&#x7F6E;&#x540E;&#x4E0D;&#x751F;&#x6548;&#xFF0C;&#x6240;&#x4EE5;&#x6682;&#x4E0D;&#x8003;&#x8651;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x5173;&#x4E8E;&#x6267;&#x884C;&#x6D4B;&#x8BD5;&#x7684;&#x65B9;&#x6848;&#x6709;&#x4E24;&#x4E2A;&#xFF1A;</p>
+<ol>
+<li>&#x53EA;&#x7528; dusk &#x8DD1;&#x6D4B;&#x8BD5;&#x3002;</li>
+<li>&#x540C;&#x65F6;&#x4F7F;&#x7528; phpunit&#x3001;dusk&#xFF0C;&#x5206;&#x522B;&#x7528;&#x4E8E;&#x666E;&#x901A;&#x6D4B;&#x8BD5;&#x548C;&#x6D4F;&#x89C8;&#x5668;&#x6D4B;&#x8BD5;&#x3002;</li>
+<li><p>&#x53EA;&#x7528; phpunit &#x8DD1;&#x6D4B;&#x8BD5;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x4F7F;&#x7528;&#x672C;&#x5730;&#x7684; sqlite&#xFF0C;&#x6D4B;&#x8BD5;&#x65F6;&#xFF0C;&#x6784;&#x5EFA; .env &#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x6837;&#x4E5F;&#x53EF;&#x4EE5;&#x6267;&#x884C; dusk &#x6D4B;&#x8BD5;&#x3002;</p>
+<h2 id="&#x63A5;&#x5165;-dusk-dashboard"><a href="#&#x63A5;&#x5165;-Dusk-Dashboard" class="headerlink" title="&#x63A5;&#x5165; Dusk Dashboard"></a>&#x63A5;&#x5165; Dusk Dashboard</h2><h3 id="&#x5B89;&#x88C5;"><a href="#&#x5B89;&#x88C5;" class="headerlink" title="&#x5B89;&#x88C5;"></a>&#x5B89;&#x88C5;</h3><p>&#x5B89;&#x88C5;&#x547D;&#x4EE4;&#xFF1A;<code>comoser require -dev beyondcode/dusk-dashboard</code><br>&#x5B89;&#x88C5;&#x65F6;&#x6BD4;&#x8F83;&#x6D88;&#x8017; CPU&#xFF0C;&#x5982;&#x679C;&#x51FA;&#x73B0; Killed &#x65F6;&#xFF0C;&#x8003;&#x8651;&#x63D0;&#x9AD8; CPU &#x9650;&#x5236;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x5728; docker &#x5185;&#x6267;&#x884C;&#xFF0C;&#x63D0;&#x5347; cpu &#x7684;&#x65B9;&#x6CD5;&#x53C2;&#x8003;&#x53E6;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x3002;</p>
+<h3 id="&#x8FD0;&#x884C;"><a href="#&#x8FD0;&#x884C;" class="headerlink" title="&#x8FD0;&#x884C;"></a>&#x8FD0;&#x884C;</h3><p>&#x6267;&#x884C;<code>php artisan dusk:dashboard</code>&#x65F6;&#x51FA;&#x73B0;&#x5982;&#x4E0B;&#x62A5;&#x9519;&#xFF1A;</p>
+<pre><code>stream_set_blocking() expects parameter 1 to be resource, null given
+</code></pre><p>&#x8FD9;&#x662F;&#x56E0;&#x4E3A; PHP &#x8FD0;&#x884C;&#x73AF;&#x5883;&#x51FA;&#x4E8E;&#x5B89;&#x5168;&#x8003;&#x8651;&#x7981;&#x7528;&#x4E86;&#x8BE5;&#x65B9;&#x6CD5;&#xFF0C;&#x8C03;&#x6574; php.ini &#x6587;&#x4EF6;&#x7684;&#x4E2D;&#x7684;<code>disable_functions</code>&#x5B57;&#x6BB5;&#x5373;&#x53EF;&#x3002;</p>
+<h3 id="&#x8BBF;&#x95EE;-dashborad"><a href="#&#x8BBF;&#x95EE;-dashborad" class="headerlink" title="&#x8BBF;&#x95EE; dashborad"></a>&#x8BBF;&#x95EE; dashborad</h3><h5 id="&#x76F4;&#x63A5;&#x66B4;&#x9732;&#x7AEF;&#x53E3;&#x5230;&#x5BBF;&#x4E3B;&#x673A;"><a href="#&#x76F4;&#x63A5;&#x66B4;&#x9732;&#x7AEF;&#x53E3;&#x5230;&#x5BBF;&#x4E3B;&#x673A;" class="headerlink" title="&#x76F4;&#x63A5;&#x66B4;&#x9732;&#x7AEF;&#x53E3;&#x5230;&#x5BBF;&#x4E3B;&#x673A;"></a>&#x76F4;&#x63A5;&#x66B4;&#x9732;&#x7AEF;&#x53E3;&#x5230;&#x5BBF;&#x4E3B;&#x673A;</h5><h5 id="nginx-&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x901A;&#x8FC7;-80-&#x7AEF;&#x53E3;&#x8BBF;&#x95EE;"><a href="#nginx-&#x53CD;&#x5411;&#x4EE3;&#x7406;&#xFF0C;&#x901A;&#x8FC7;-80-&#x7AEF;&#x53E3;&#x8BBF;&#x95EE;&#x3002;" class="headerlink" title="nginx &#x53CD;&#x5411;&#x4EE3;&#x7406;&#xFF0C;&#x901A;&#x8FC7; 80 &#x7AEF;&#x53E3;&#x8BBF;&#x95EE;&#x3002;"></a>nginx &#x53CD;&#x5411;&#x4EE3;&#x7406;&#xFF0C;&#x901A;&#x8FC7; 80 &#x7AEF;&#x53E3;&#x8BBF;&#x95EE;&#x3002;</h5><p>dashboard &#x5E94;&#x8BE5;&#x662F;&#x51FA;&#x4E8E;&#x5B89;&#x5168;&#x8003;&#x8651;&#xFF0C;&#x4F1A;&#x68C0;&#x6D4B; host &#x662F;&#x5426;&#x4E3A; env &#x6587;&#x4EF6;&#x4E2D;&#x6307;&#x5B9A; APP_URL&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x65F6;&#x9700;&#x8981;&#x6307;&#x5B9A;<code>Host</code>&#xFF0C;&#x5426;&#x5219;&#x8BBF;&#x95EE;&#x9875;&#x9762;&#x65F6;&#x4F1A; 404&#x3002;</p>
+<pre class=" language-nginx"><code class="language-nginx"><span class="token keyword">server</span> <span class="token punctuation">{</span>
+ <span class="token keyword">listen</span>   <span class="token number">80</span><span class="token punctuation">;</span>
+ <span class="token keyword">server_name</span> dusk<span class="token punctuation">.</span>local<span class="token punctuation">;</span>
+
+ <span class="token keyword">location</span> <span class="token operator">/</span>socket <span class="token punctuation">{</span>
+     <span class="token keyword">proxy_pass</span> <span class="token keyword">http</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>__DOCKER_PHP_FPM_74__<span class="token punctuation">:</span><span class="token number">9773</span><span class="token operator">/</span>socket<span class="token punctuation">;</span>
+     <span class="token comment" spellcheck="true"># this magic is needed for WebSocket</span>
+     <span class="token keyword">proxy_http_version</span>  <span class="token number">1.1</span><span class="token punctuation">;</span>
+     <span class="token keyword">proxy_set_header</span>    Upgrade <span class="token variable">$http_upgrade</span><span class="token punctuation">;</span>
+     <span class="token keyword">proxy_set_header</span>    Connection <span class="token string">&quot;upgrade&quot;</span><span class="token punctuation">;</span>
+     <span class="token keyword">proxy_set_header</span>    Host <span class="token string">&quot;private.local.tbxzs.cn:9773&quot;</span><span class="token punctuation">;</span>
+     <span class="token keyword">proxy_set_header</span>    X<span class="token operator">-</span>Real<span class="token operator">-</span>IP <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+
+ <span class="token keyword">location</span> <span class="token operator">/</span> <span class="token punctuation">{</span>
+       <span class="token keyword">proxy_pass</span> <span class="token keyword">http</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>__DOCKER_PHP_FPM_74__<span class="token punctuation">:</span><span class="token number">9773</span><span class="token punctuation">;</span>
+       <span class="token keyword">proxy_set_header</span>    Host <span class="token string">&quot;private.local.tbxzs.cn:9773&quot;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ol>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Fengit</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://b.fengbl.cn/2020/09/10/2020-09-10-phpunit-and-dusk/">http://b.fengbl.cn/2020/09/10/2020-09-10-phpunit-and-dusk/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Fengit</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/PHP-PHPUnit-Docker/">
+                                    <span class="chip bg-color">PHP,PHPUnit,Docker</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/09/10/2020-09-10-optical-modem/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="光猫进入超管">
+                        
+                        <span class="card-title">光猫进入超管</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            &#x524D;&#x60C5;&#x63D0;&#x8981;&#x6700;&#x8FD1;&#x8981;&#x6362;&#x5BBD;&#x5E26;&#xFF0C;&#x53D1;&#x73B0;&#x8054;&#x901A;
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-10
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/PHP/" class="post-category">
+                                    PHP
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/PHP-PHPUnit-Docker/">
+                        <span class="chip bg-color">PHP,PHPUnit,Docker</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/09/10/2020-09-10-composer-killed/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Composer 执行时被 Killed">
+                        
+                        <span class="card-title">Composer 执行时被 Killed</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            &#x6700;&#x8FD1;&#x5728;&#x6267;&#x884C;&#x6267;&#x884C; composer require &#x65F6;&#x51FA;&#x73B0;&#x4E86;&#x6267;&#x884
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/PHP/" class="post-category">
+                                    PHP
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/PHP-PHPUnit/">
+                        <span class="chip bg-color">PHP,PHPUnit</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2017</span>
+            <a href="/about" target="_blank">Fengit</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,1804 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="CI源码分析-Uri.php, 八两的八九与二三">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>CI源码分析-Uri.php | 八两的八九与二三</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="/css/prism-twilight.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">八两的八九与二三</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Medias</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/musics">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Musics</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Galleries</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">八两的八九与二三</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			Medias
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/musics " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Musics</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/books " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/galleries " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Galleries</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">CI源码分析-Uri.php</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/CI/">
+                                <span class="chip bg-color">CI</span>
+                            </a>
+                        
+                            <a href="/tags/PHP/">
+                                <span class="chip bg-color">PHP</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/PHP/" class="post-category">
+                                PHP
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2016-02-15
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>CodeIgniter.php &#x5F15;&#x5165;&#x7684;&#x7B2C;&#x4E94;&#x4E2A;&#x6838;&#x5FC3;&#x6587;&#x4EF6;&#xFF08;<code>$URI</code>&#xFF09;&#x3002;URI &#x7C7B;&#x7528;&#x4E8E;&#x5E2E;&#x52A9;&#x4F60;&#x4ECE; URI &#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x83B7;&#x53D6;&#x4FE1;&#x606F;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528; URI &#x8DEF;&#x7531;&#xFF0C; &#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4ECE;&#x8DEF;&#x7531;&#x540E;&#x7684; URI &#x4E2D;&#x83B7;&#x53D6;&#x4FE1;&#x606F;&#x3002; </p>
+<a id="more"></a>
+<blockquote>
+<p>&#x7B49;&#x5F85;&#x6D88;&#x5316;&#x7684;&#x77E5;&#x8BC6;&#xFF1A;PHP&#x9884;&#x5B9A;&#x4E49;&#x5E38;&#x91CF;&#x3001;PHP&#x8FD0;&#x884C;&#x65B9;&#x5F0F;(SAPI)</p>
+</blockquote>
+<blockquote>
+<p>tips:string &#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x4ECE; 0 &#x5F00;&#x59CB;&#x7684;&#x4E0B;&#x6807;&#xFF0C;&#x7528;&#x7C7B;&#x4F3C; array &#x7ED3;&#x6784;&#x4E2D;&#x7684;&#x65B9;&#x62EC;&#x53F7;&#x5305;&#x542B;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x5B57;&#x6765;&#x8BBF;&#x95EE;&#x548C;&#x4FEE;&#x6539;&#xFF0C;&#x6BD4;&#x5982; $str[42]&#x3002;&#x53EF;&#x4EE5;&#x628A; string &#x5F53;&#x6210;&#x5B57;&#x7B26;&#x7EC4;&#x6210;&#x7684; array&#x3002;&#x51FD;&#x6570; substr() &#x548C; substr_replace() &#x53EF;&#x7528;&#x4E8E;&#x64CD;&#x4F5C;&#x591A;&#x4E8E;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x7684;&#x60C5;&#x51B5;&#x3002; &#x8FD9;&#x662F;&#x6211;&#x4E00;&#x76F4;&#x4EE5;&#x6765;&#x6CA1;&#x6CE8;&#x610F;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x8BF4;&#x57FA;&#x7840;&#x8981;&#x6253;&#x597D;&#x3002;</p>
+</blockquote>
+<pre class=" language-PHP"><code class="language-PHP"><?php
+/**
+ * CodeIgniter
+ *
+ * An open source application development framework for PHP
+ *
+ * This content is released under the MIT License (MIT)
+ *
+ * Copyright (c) 2014 - 2015, British Columbia Institute of Technology
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * @package    CodeIgniter
+ * @author    EllisLab Dev Team
+ * @copyright    Copyright (c) 2008 - 2014, EllisLab, Inc. (http://ellislab.com/)
+ * @copyright    Copyright (c) 2014 - 2015, British Columbia Institute of Technology (http://bcit.ca/)
+ * @license    http://opensource.org/licenses/MIT    MIT License
+ * @link    http://codeigniter.com
+ * @since    Version 1.0.0
+ * @filesource
+ */
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+/**
+ * URI Class
+ *
+ * Parses URIs and determines routing
+ *
+ * @package        CodeIgniter
+ * @subpackage    Libraries
+ * @category    URI
+ * @author        EllisLab Dev Team
+ * @link        http://codeigniter.com/user_guide/libraries/uri.html
+ */
+class CI_URI {
+
+    /**
+     * List of cached URI segments
+     *
+     * @var    array
+     */
+    public $keyval = array();
+
+    /**
+     * Current URI string
+     *
+     * @var    string
+     */
+    public $uri_string = '';
+
+    /**
+     * List of URI segments
+     *
+     * Starts at 1 instead of 0.
+     *
+     * @var    array
+     */
+    public $segments = array();
+
+    /**
+     * List of routed URI segments
+     *
+     * Starts at 1 instead of 0.
+     *
+     * @var    array
+     */
+    public $rsegments = array();
+
+    /**
+     * Permitted URI chars
+     *
+     * PCRE character group allowed in URI segments
+     *
+     * @var    string
+     */
+    protected $_permitted_uri_chars;
+
+    /**
+     * Class constructor
+     *
+     * @return    void
+     */
+    public function __construct()
+    {
+        $this->config =&amp; load_class(&apos;Config&apos;, &apos;core&apos;);
+
+        // If query strings are enabled, we don&apos;t need to parse any segments.
+        // However, they don&apos;t make sense under CLI.
+        if (is_cli() OR $this-&gt;config-&gt;item(&apos;enable_query_strings&apos;) !== TRUE)
+        {
+            $this-&gt;_permitted_uri_chars = $this-&gt;config-&gt;item(&apos;permitted_uri_chars&apos;);
+
+            // If it&apos;s a CLI request, ignore the configuration
+            if (is_cli())
+            {
+                $uri = $this-&gt;_parse_argv();
+            }
+            else
+            {
+                $protocol = $this-&gt;config-&gt;item(&apos;uri_protocol&apos;);
+                empty($protocol) &amp;&amp; $protocol = &apos;REQUEST_URI&apos;;
+
+                switch ($protocol)
+                {
+                    case &apos;AUTO&apos;: // For BC purposes only
+                    case &apos;REQUEST_URI&apos;:
+                        $uri = $this-&gt;_parse_request_uri();
+                        break;
+                    case &apos;QUERY_STRING&apos;:
+                        $uri = $this-&gt;_parse_query_string();
+                        break;
+                    case &apos;PATH_INFO&apos;:
+                    default:
+                        $uri = isset($_SERVER[$protocol])
+                            ? $_SERVER[$protocol]
+                            : $this-&gt;_parse_request_uri();
+                        break;
+                }
+            }
+
+            $this-&gt;_set_uri_string($uri);
+        }
+
+        log_message(&apos;info&apos;, &apos;URI Class Initialized&apos;);
+    }
+</code></pre>
+<blockquote>
+<p><code>uri_protocol</code>&#x53EF;&#x9009;&#x9879;&#x6709;<code>AUTO</code>&#x3001;<code>PATH_INFO</code>&#x3001;<code>QUERY_STRING</code>&#x3001;<code>REQUEST_URI</code>&#x3001;<code>ORIG_PATH_INFO</code><br>&#x542B;&#x4E49;&#x5206;&#x522B;&#x5982;&#x4E0B;&#xFF1A;<br><code>QUERY_STRING</code>:&#x67E5;&#x8BE2;&#x5B57;&#x7B26;&#x4E32;&#xFF1B;<br><code>PATH_INFO</code>&#xFF1A;&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4F9B;&#x7684;&#x8DEF;&#x5F84;&#x4FE1;&#x606F;&#xFF0C;&#x5373;&#x5728;&#x5B9E;&#x9645;&#x6267;&#x884C;&#x811A;&#x672C;&#x540E;&#x9762;&#x5C3E;&#x968F;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4F1A;&#x53BB;&#x6389;Query String&#xFF1B;<br><code>REQUEST_URI</code>&#xFF1A;&#x5305;&#x542B;HTTP&#x534F;&#x8BAE;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;URI&#x5185;&#x5BB9;&#x3002;<br>&#x8BBF;&#x95EE;&#xFF1A;<a href="http://pc.local/index.php/product/pc/summary?a=1&#x65F6;" target="_blank" rel="noopener">http://pc.local/index.php/product/pc/summary?a=1&#x65F6;</a><br><code>PATH_INFO</code>&#x4E3A;/product/pc/summary&#xFF1B;<code>REQUEST_URI</code>&#x4E3A;/index.php/product/pc/summary?a=1&#xFF1B;<code>QUERY_STRING</code>&#x4E3A;a=1</p>
+</blockquote>
+<pre class=" language-PHP"><code class="language-PHP">    // --------------------------------------------------------------------
+
+    /**
+     * Set URI String
+     * &#x521D;&#x59CB;&#x5316; segments &#x6570;&#x7EC4;&#x3002;uri&#x5404;&#x6BB5;&#x6309;&#x7167;&#x4ECE;&#x5DE6;&#x5F80;&#x53F3;&#x7684;&#x987A;&#x5E8F;&#x4E00;&#x6B21;&#x653E;&#x5165;&#x6570;&#x7EC4;&#x4E2D;&#x3002;
+     *
+     * @param     string    $str
+     * @return    void
+     */
+    protected function _set_uri_string($str)
+    {
+        // Filter out control characters and trim slashes
+        $this-&gt;uri_string = trim(remove_invisible_characters($str, FALSE), &apos;/&apos;);
+
+        if ($this-&gt;uri_string !== &apos;&apos;)
+        {
+            // Remove the URL suffix, if present
+            if (($suffix = (string) $this-&gt;config-&gt;item(&apos;url_suffix&apos;)) !== &apos;&apos;)
+            {
+                $slen = strlen($suffix);
+
+                if (substr($this-&gt;uri_string, -$slen) === $suffix)
+                {
+                    $this-&gt;uri_string = substr($this-&gt;uri_string, 0, -$slen);
+                }
+            }
+
+            $this-&gt;segments[0] = NULL;
+            // Populate the segments array
+            foreach (explode(&apos;/&apos;, trim($this-&gt;uri_string, &apos;/&apos;)) as $val)
+            {
+                $val = trim($val);
+                // Filter segments for security
+                $this-&gt;filter_uri($val);
+
+                if ($val !== &apos;&apos;)
+                {
+                    $this-&gt;segments[] = $val;
+                }
+            }
+
+            //&#x79FB;&#x9664;&#x5360;&#x4F4D;&#x5B57;&#x6BB5;
+            unset($this-&gt;segments[0]);
+        }
+    }
+
+    // --------------------------------------------------------------------
+
+    /**
+     * Parse REQUEST_URI
+     *
+     * Will parse REQUEST_URI and automatically detect the URI from it,
+     * while fixing the query string if necessary.
+     *
+     * @return    string
+     */
+    protected function _parse_request_uri()
+    {
+
+        //$url=http://www.qing.ga/welcome/tt?s=1
+        //$_SERVER[&apos;REQUEST_URI&apos;]=/welcome/tt?s=1
+        //$SCRIPT_NAME=/index.php
+        if ( ! isset($_SERVER[&apos;REQUEST_URI&apos;], $_SERVER[&apos;SCRIPT_NAME&apos;]))
+        {
+            return &apos;&apos;;
+        }
+
+        // parse_url() returns false if no host is present, but the path or query string
+        // contains a colon followed by a number
+        $uri = parse_url(&apos;http://dummy&apos;.$_SERVER[&apos;REQUEST_URI&apos;]);
+        $query = isset($uri[&apos;query&apos;]) ? $uri[&apos;query&apos;] : &apos;&apos;;
+        $uri = isset($uri[&apos;path&apos;]) ? $uri[&apos;path&apos;] : &apos;&apos;;
+
+        //&#x5B57;&#x7B26;&#x4E32;&#x53EF;&#x4EE5;&#x7528;&#x6570;&#x7EC4;&#x7684;&#x5F62;&#x5F0F;&#x6765;&#x64CD;&#x4F5C;
+        if (isset($_SERVER[&apos;SCRIPT_NAME&apos;][0]))
+        {
+            if (strpos($uri, $_SERVER[&apos;SCRIPT_NAME&apos;]) === 0)
+            {
+                $uri = (string) substr($uri, strlen($_SERVER[&apos;SCRIPT_NAME&apos;]));
+            }
+            elseif (strpos($uri, dirname($_SERVER[&apos;SCRIPT_NAME&apos;])) === 0)
+            {
+                $uri = (string) substr($uri, strlen(dirname($_SERVER[&apos;SCRIPT_NAME&apos;])));
+            }
+        }
+
+        // This section ensures that even on servers that require the URI to be in the query string (Nginx) a correct
+        // URI is found, and also fixes the QUERY_STRING server var and $_GET array.
+        if (trim($uri, &apos;/&apos;) === &apos;&apos; &amp;&amp; strncmp($query, &apos;/&apos;, 1) === 0)
+        {
+            $query = explode(&apos;?&apos;, $query, 2);
+            $uri = $query[0];
+            $_SERVER[&apos;QUERY_STRING&apos;] = isset($query[1]) ? $query[1] : &apos;&apos;;
+        }
+        else
+        {
+            $_SERVER[&apos;QUERY_STRING&apos;] = $query;
+        }
+
+        //&#x8BB2;&#x5904;&#x7406;&#x540E;&#x7684;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x653E;&#x5165;$_GET&#x6570;&#x7EC4;
+        parse_str($_SERVER[&apos;QUERY_STRING&apos;], $_GET);
+
+        if ($uri === &apos;/&apos; OR $uri === &apos;&apos;)
+        {
+            return &apos;/&apos;;
+        }
+
+        // Do some final cleaning of the URI and return it
+        // &#x79FB;&#x9664; ../&#x3001; ////&#x7B49;&#x65E0;&#x610F;&#x4E49;&#x975E;&#x6CD5;&#x5B57;&#x7B26;
+        return $this-&gt;_remove_relative_directory($uri);
+    }
+</code></pre>
+<blockquote>
+<pre><code>`void parse_str ( string $str [, array &amp;$arr ] )` &#x5982;&#x679C; str &#x662F; URL
+</code></pre><p>&#x4F20;&#x9012;&#x5165;&#x7684;&#x67E5;&#x8BE2;&#x5B57;&#x7B26;&#x4E32;&#xFF08;query string&#xFF09;&#xFF0C;&#x5219;&#x5C06;&#x5B83;&#x89E3;&#x6790;&#x4E3A;&#x53D8;&#x91CF;&#x5E76;&#x8BBE;&#x7F6E;&#x5230;&#x5F53;&#x524D;&#x4F5C;&#x7528;&#x57DF;&#x3002;<br>    &#x62D3;&#x5C55;&#xFF1A;&#x6570;&#x7EC4;&#x5408;&#x5E76; <code>+</code>&#x3001;  <code>array_unshift</code>&#x3001;<code>arrar_merge</code><br><code>int strncmp ( string $str1 , string $str2 , int $len )</code> &#x8BE5;&#x51FD;&#x6570;&#x4E0E; <code>strcmp()</code> &#x7C7B;&#x4F3C;&#xFF0C;&#x4E0D;&#x540C;&#x4E4B;&#x5904;&#x5728;&#x4E8E;&#x4F60;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x6BD4;&#x8F83;&#x65F6;&#x4F7F;&#x7528;&#x7684;&#x957F;&#x5EA6;&#xFF08;&#x5373;&#x6700;&#x5927;&#x6BD4;&#x8F83;&#x957F;&#x5EA6;&#xFF09;&#x3002;</p>
+</blockquote>
+<pre class=" language-PHP"><code class="language-PHP">    // --------------------------------------------------------------------
+
+    /**
+     * Parse QUERY_STRING
+     *
+     * Will parse QUERY_STRING and automatically detect the URI from it.
+     *
+     * @return    string
+     */
+    protected function _parse_query_string()
+    {
+        $uri = isset($_SERVER[&apos;QUERY_STRING&apos;]) ? $_SERVER[&apos;QUERY_STRING&apos;] : @getenv(&apos;QUERY_STRING&apos;);
+
+        if (trim($uri, &apos;/&apos;) === &apos;&apos;)
+        {
+            return &apos;&apos;;
+        }
+        elseif (strncmp($uri, &apos;/&apos;, 1) === 0)
+        {
+            $uri = explode(&apos;?&apos;, $uri, 2);
+            $_SERVER[&apos;QUERY_STRING&apos;] = isset($uri[1]) ? $uri[1] : &apos;&apos;;
+            $uri = $uri[0];
+        }
+
+        parse_str($_SERVER[&apos;QUERY_STRING&apos;], $_GET);
+
+        return $this-&gt;_remove_relative_directory($uri);
+    }
+
+    // --------------------------------------------------------------------
+
+    /**
+     * Parse CLI arguments
+     * &#x83B7;&#x5F97;&#x547D;&#x4EE4;&#x884C;&#x4F20;&#x9012;&#x7684;&#x53C2;&#x6570;&#xFF1A;0&#x53F7;&#x53C2;&#x6570;&#x4E3A;&#x6587;&#x4EF6;&#x540D;
+     *
+     * Take each command line argument and assume it is a URI segment.
+     *
+     * @return    string
+     */
+    protected function _parse_argv()
+    {
+        //&#x53D6;&#x51FA;&#x53C2;&#x6570;
+        $args = array_slice($_SERVER[&apos;argv&apos;], 1);
+
+        //&#x8FD4;&#x56DE;&#x6570;&#x7EC4;&#x5F62;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x53C2;&#x6570;&#x4E0D;&#x5B58;&#x5728;&#x5219;&#x8FD4;&#x56DE;&#x7A7A;
+        return $args ? implode(&apos;/&apos;, $args) : &apos;&apos;;
+    }
+
+    // --------------------------------------------------------------------
+
+    /**
+     * Remove relative directory (../) and multi slashes (///)
+     * &#x5B89;&#x5168;&#xFF1A;&#x79FB;&#x9664; ../&#x3001;///
+     * 
+     * Do some final cleaning of the URI and return it, currently only used in self::_parse_request_uri()
+     *
+     * @param    string    $url
+     * @return    string
+     */
+    protected function _remove_relative_directory($uri)
+    {
+        $uris = array();
+        $tok = strtok($uri, &apos;/&apos;);
+        while ($tok !== FALSE)
+        {
+            if (( ! empty($tok) OR $tok === &apos;0&apos;) &amp;&amp; $tok !== &apos;..&apos;)
+            {
+                $uris[] = $tok;
+            }
+            $tok = strtok(&apos;/&apos;);
+        }
+
+        return implode(&apos;/&apos;, $uris);
+    }
+</code></pre>
+<blockquote>
+<pre><code>`string strtok ( string $str , string $token )`:strtok() &#x5C06;&#x5B57;&#x7B26;&#x4E32; str &#x5206;&#x5272;&#x4E3A;&#x82E5;&#x5E72;&#x5B50;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B50;&#x5B57;&#x7B26;&#x4E32;&#x4EE5; token &#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x5206;&#x5272;&#x3002;&#x8FD9;&#x4E5F;&#x5C31;&#x610F;&#x5473;&#x7740;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x662F; &quot;This is an example  string&quot;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7A7A;&#x683C;&#x5B57;&#x7B26;&#x5C06;&#x8FD9;&#x53E5;&#x8BDD;&#x5206;&#x5272;&#x6210;&#x72EC;&#x7ACB;&#x7684;&#x5355;&#x8BCD;&#x3002;      &#x6CE8;&#x610F;&#x4EC5;&#x7B2C;&#x4E00;&#x6B21;&#x8C03;&#x7528; strtok &#x51FD;&#x6570;&#x65F6;&#x4F7F;&#x7528; string  &#x53C2;&#x6570;&#x3002;&#x540E;&#x6765;&#x6BCF;&#x6B21;&#x8C03;&#x7528; strtok&#xFF0C;&#x90FD;&#x5C06;&#x53EA;&#x4F7F;&#x7528; token &#x53C2;&#x6570;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4F1A;&#x8BB0;&#x4F4F;&#x5B83;&#x5728;&#x5B57;&#x7B26;&#x4E32; string &#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x5982;&#x679C;&#x8981;&#x91CD;&#x65B0;&#x5F00;&#x59CB;&#x5206;&#x5272;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x518D;&#x6B21;&#x4F7F;&#x7528; string &#x6765;&#x8C03;&#x7528; strtok &#x51FD;&#x6570;&#xFF0C;&#x4EE5;&#x4FBF;&#x5B8C;&#x6210;&#x521D;&#x59CB;&#x5316;&#x5DE5;&#x4F5C;&#x3002;&#x6CE8;&#x610F;&#x53EF;&#x4EE5;&#x5728; token &#x53C2;&#x6570;&#x4E2D;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x3002;&#x5B57;&#x7B26;&#x4E32;&#x5C06;&#x88AB;&#x8BE5;&#x53C2;&#x6570;&#x4E2D;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5206;&#x5272;&#x3002;
+</code></pre><p><code>`</code> PHP<br>    // &#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2013;</p>
+</blockquote>
+<pre><code>/**
+ * Filter URI
+ *
+ * Filters segments for malicious characters.
+ * &#x8FC7;&#x6EE4;&#x5B57;&#x7B26;&#x3002;
+ *
+ * @param    string    $str
+ * @return    void
+ */
+public function filter_uri(&amp;$str)
+{
+    if ( ! empty($str) &amp;&amp; ! empty($this-&gt;_permitted_uri_chars) &amp;&amp; ! preg_match(&apos;/^[&apos;.$this-&gt;_permitted_uri_chars.&apos;]+$/i&apos;.(UTF8_ENABLED ? &apos;u&apos; : &apos;&apos;), $str))
+    {
+        show_error(&apos;The URI you submitted has disallowed characters.&apos;, 400);
+    }
+}
+
+// --------------------------------------------------------------------
+
+/**
+ * Fetch URI Segment
+ *
+ * @see        CI_URI::$segments
+ * @param    int        $n        Index
+ * @param    mixed        $no_result    What to return if the segment index is not found
+ * @return    mixed
+ */
+public function segment($n, $no_result = NULL)
+{
+    return isset($this-&gt;segments[$n]) ? $this-&gt;segments[$n] : $no_result;
+}
+
+// --------------------------------------------------------------------
+
+/**
+ * Fetch URI &quot;routed&quot; Segment
+ *
+ * Returns the re-routed URI segment (assuming routing rules are used)
+ * based on the index provided. If there is no routing, will return
+ * the same result as CI_URI::segment().
+ *
+ * @see        CI_URI::$rsegments
+ * @see        CI_URI::segment()
+ * @param    int        $n        Index
+ * @param    mixed        $no_result    What to return if the segment index is not found
+ * @return    mixed
+ */
+public function rsegment($n, $no_result = NULL)
+{
+    return isset($this-&gt;rsegments[$n]) ? $this-&gt;rsegments[$n] : $no_result;
+}
+
+// --------------------------------------------------------------------
+
+/**
+ * URI to assoc
+ *
+ * Generates an associative array of URI data starting at the supplied
+ * segment index. For example, if this is your URI:
+ *
+ *    example.com/user/search/name/joe/location/UK/gender/male
+ *
+ * You can use this method to generate an array with this prototype:
+ *
+ *    array (
+ *        name =&gt; joe
+ *        location =&gt; UK
+ *        gender =&gt; male
+ *     )
+ *
+ * @param    int    $n        Index (default: 3)
+ * @param    array    $default    Default values
+ * @return    array
+ */
+public function uri_to_assoc($n = 3, $default = array())
+{
+    return $this-&gt;_uri_to_assoc($n, $default, &apos;segment&apos;);
+}
+
+// --------------------------------------------------------------------
+
+/**
+ * Routed URI to assoc
+ *
+ * Identical to CI_URI::uri_to_assoc(), only it uses the re-routed
+ * segment array.
+ *
+ * @see        CI_URI::uri_to_assoc()
+ * @param     int    $n        Index (default: 3)
+ * @param     array    $default    Default values &#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x7684;&#x952E;&#x540D;&#xFF0C;&#x8FD9;&#x6837;&#x5373;&#x4F7F; URI &#x4E2D;&#x7F3A;&#x5C11;&#x67D0;&#x4E2A;&#x952E;&#x540D;&#xFF0C;&#x4E5F;&#x80FD;&#x4FDD;&#x8BC1;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x7EC4;&#x4E2D;&#x5305;&#x542B;&#x8BE5;&#x7D22;&#x5F15;&#x3002;
+ * @return     array
+ */
+public function ruri_to_assoc($n = 3, $default = array())
+{
+    return $this-&gt;_uri_to_assoc($n, $default, &apos;rsegment&apos;);
+}
+
+// --------------------------------------------------------------------
+
+/**
+ * Internal URI-to-assoc
+ *
+ * Generates a key/value pair from the URI string or re-routed URI string.
+ *
+ * @used-by    CI_URI::uri_to_assoc()
+ * @used-by    CI_URI::ruri_to_assoc()
+ * @param    int    $n        Index (default: 3)
+ * @param    array    $default    Default values
+ * @param    string    $which        Array name (&apos;segment&apos; or &apos;rsegment&apos;)
+ * @return    array
+ */
+protected function _uri_to_assoc($n = 3, $default = array(), $which = &apos;segment&apos;)
+{
+    if ( ! is_numeric($n))
+    {
+        return $default;
+    }
+
+    //&#x7F13;&#x5B58;
+    if (isset($this-&gt;keyval[$which], $this-&gt;keyval[$which][$n]))
+    {
+        return $this-&gt;keyval[$which][$n];
+    }
+
+    $total_segments = &quot;total_{$which}s&quot;;
+    $segment_array = &quot;{$which}_array&quot;;
+
+    if ($this-&gt;$total_segments() &lt; $n)
+    {
+        return (count($default) === 0)
+            ? array()
+            : array_fill_keys($default, NULL);
+    }
+
+    $segments = array_slice($this-&gt;$segment_array(), ($n - 1));
+    $i = 0;
+    $lastval = &apos;&apos;;
+    $retval = array();
+
+    // /a/b/c/d  a=&gt;b,c=&gt;d &#x7B2C;0 2 4&#x2026;&#x4E2A;&#x4F5C;&#x4E3A;key
+    foreach ($segments as $seg)
+    {
+        if ($i % 2)
+        {
+            $retval[$lastval] = $seg;
+        }
+        else
+        {
+            $retval[$seg] = NULL;
+            $lastval = $seg;
+        }
+
+        $i++;
+    }
+
+    if (count($default) &gt; 0)
+    {
+        foreach ($default as $val)
+        {
+            if ( ! array_key_exists($val, $retval))
+            {
+                $retval[$val] = NULL;
+            }
+        }
+    }
+
+    // Cache the array for reuse
+    isset($this-&gt;keyval[$which]) OR $this-&gt;keyval[$which] = array();
+    $this-&gt;keyval[$which][$n] = $retval;
+    return $retval;
+}
+
+// --------------------------------------------------------------------
+
+/**
+ * Assoc to URI
+ * &#x6570;&#x7EC4;&#x8F6C;uri
+ *
+ * Generates a URI string from an associative array.
+ *
+ * @param    array    $array    Input array of key/value pairs
+ * @return    string    URI string
+ */
+public function assoc_to_uri($array)
+{
+    $temp = array();
+    foreach ((array) $array as $key =&gt; $val)
+    {
+        $temp[] = $key;
+        $temp[] = $val;
+    }
+
+    return implode(&apos;/&apos;, $temp);
+}
+
+// --------------------------------------------------------------------
+
+/**
+ * Slash segment
+ *
+ * Fetches an URI segment with a slash.
+ *
+ * @param    int    $n    Index
+ * @param    string    $where    Where to add the slash (&apos;trailing&apos; or &apos;leading&apos;)
+ * @return    string
+ */
+public function slash_segment($n, $where = &apos;trailing&apos;)
+{
+    return $this-&gt;_slash_segment($n, $where, &apos;segment&apos;);
+}
+
+// --------------------------------------------------------------------
+
+/**
+ * Slash routed segment
+ *
+ * Fetches an URI routed segment with a slash.
+ *
+ * @param    int    $n    Index
+ * @param    string    $where    Where to add the slash (&apos;trailing&apos; or &apos;leading&apos;)
+ * @return    string
+ */
+public function slash_rsegment($n, $where = &apos;trailing&apos;)
+{
+    return $this-&gt;_slash_segment($n, $where, &apos;rsegment&apos;);
+}
+
+// --------------------------------------------------------------------
+
+/**
+ * Internal Slash segment
+ *
+ * Fetches an URI Segment and adds a slash to it.
+ *
+ * @used-by    CI_URI::slash_segment()
+ * @used-by    CI_URI::slash_rsegment()
+ *
+ * @param    int    $n    Index
+ * @param    string    $where    Where to add the slash (&apos;trailing&apos; or &apos;leading&apos;)
+ * @param    string    $which    Array name (&apos;segment&apos; or &apos;rsegment&apos;)
+ * @return    string
+ */
+protected function _slash_segment($n, $where = &apos;trailing&apos;, $which = &apos;segment&apos;)
+{
+    $leading = $trailing = &apos;/&apos;;
+
+    if ($where === &apos;trailing&apos;)
+    {
+        $leading    = &apos;&apos;;
+    }
+    elseif ($where === &apos;leading&apos;)
+    {
+        $trailing    = &apos;&apos;;
+    }
+
+    return $leading.$this-&gt;$which($n).$trailing;
+}
+
+// --------------------------------------------------------------------
+
+/**
+ * Segment Array
+ *
+ * @return    array    CI_URI::$segments
+ */
+public function segment_array()
+{
+    return $this-&gt;segments;
+}
+
+// --------------------------------------------------------------------
+
+/**
+ * Routed Segment Array
+ *
+ * @return    array    CI_URI::$rsegments
+ */
+public function rsegment_array()
+{
+    return $this-&gt;rsegments;
+}
+
+// --------------------------------------------------------------------
+
+/**
+ * Total number of segments
+ *
+ * @return    int
+ */
+public function total_segments()
+{
+    return count($this-&gt;segments);
+}
+
+// --------------------------------------------------------------------
+
+/**
+ * Total number of routed segments
+ *
+ * @return    int
+ */
+public function total_rsegments()
+{
+    return count($this-&gt;rsegments);
+}
+
+// --------------------------------------------------------------------
+
+/**
+ * Fetch URI string
+ *
+ * @return    string    CI_URI::$uri_string
+ */
+public function uri_string()
+{
+    return $this-&gt;uri_string;
+}
+
+// --------------------------------------------------------------------
+
+/**
+ * Fetch Re-routed URI string
+ *
+ * @return    string
+ */
+public function ruri_string()
+{
+    return ltrim(load_class(&apos;Router&apos;, &apos;core&apos;)-&gt;directory, &apos;/&apos;).implode(&apos;/&apos;, $this-&gt;rsegments);
+}
+</code></pre><p>}</p>
+<p><code>`</code></p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Fengit</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://b.fengbl.cn/2016/02/15/ci-sourcecode-uri.php/">http://b.fengbl.cn/2016/02/15/ci-sourcecode-uri.php/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Fengit</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/CI/">
+                                    <span class="chip bg-color">CI</span>
+                                </a>
+                            
+                                <a href="/tags/PHP/">
+                                    <span class="chip bg-color">PHP</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2016/02/15/ci-sourcecode-router.php/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="CI源码分析-Router.php">
+                        
+                        <span class="card-title">CI源码分析-Router.php</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            CodeIgniter.php &#x5F15;&#x5165;&#x7684;&#x7B2C;&#x516D;&#x4E2A;&#x6838;&#x5FC3;&#x6587;&#x4EF6;&#xFF08;$RTR&#xFF09;&#xF
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2016-02-15
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/PHP/" class="post-category">
+                                    PHP
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/CI/">
+                        <span class="chip bg-color">CI</span>
+                    </a>
+                    
+                    <a href="/tags/PHP/">
+                        <span class="chip bg-color">PHP</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2016/02/14/ci-sourcecode-hooks.php/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="CI源码分析-Hooks.php">
+                        
+                        <span class="card-title">CI源码分析-Hooks.php</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+item(&apos;enable_hooks&apos;) === FALSE)
+        {
+            return;
+        }
+
+        // Grab the &quot;hooks&quot
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2016-02-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/PHP/" class="post-category">
+                                    PHP
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/CI/">
+                        <span class="chip bg-color">CI</span>
+                    </a>
+                    
+                    <a href="/tags/PHP/">
+                        <span class="chip bg-color">PHP</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2017</span>
+            <a href="/about" target="_blank">Fengit</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
